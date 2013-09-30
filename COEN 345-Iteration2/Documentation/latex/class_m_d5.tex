@@ -1,0 +1,82 @@
+\hypertarget{class_m_d5}{
+\section{MD5 Class Reference}
+\label{class_m_d5}\index{MD5@{MD5}}
+}
+
+
+This class represents the implementation of the md5 message digest algorithm.  
+
+
+{\ttfamily \#include $<$hl\_\-md5.h$>$}\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_m_d5_ad7a5fd3b9b97865ded5ac8ecd24905fc}{MD5Init} (\hyperlink{struct_m_d5___c_t_x}{MD5\_\-CTX} $\ast$context)
+\begin{DoxyCompactList}\small\item\em Initialization begins an operation, writing a new context. \item\end{DoxyCompactList}\item 
+void \hyperlink{class_m_d5_afdab8c1ad9a976589f78a64c534d2c54}{MD5Update} (\hyperlink{struct_m_d5___c_t_x}{MD5\_\-CTX} $\ast$context, unsigned char $\ast$input, unsigned int inputLen)
+\begin{DoxyCompactList}\small\item\em Block update operation. Continues an md5 message-\/digest operation, processing another message block, and updating the context. \item\end{DoxyCompactList}\item 
+void \hyperlink{class_m_d5_af527ca99477e2cff37a4f1952bcc7f90}{MD5Final} (unsigned char digest\mbox{[}16\mbox{]}, \hyperlink{struct_m_d5___c_t_x}{MD5\_\-CTX} $\ast$context)
+\begin{DoxyCompactList}\small\item\em Finalization ends the md5 message-\/digest operation, writing the the message digest and zeroizing the context. \item\end{DoxyCompactList}\item 
+\hyperlink{class_m_d5_afa6155ec36de415ab2dcf5e54b670d13}{MD5} ()
+\begin{DoxyCompactList}\small\item\em default constructor \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This class represents the implementation of the md5 message digest algorithm. Basically the class provides three public member-\/functions to create a hash: \hyperlink{class_m_d5_ad7a5fd3b9b97865ded5ac8ecd24905fc}{MD5Init()}, \hyperlink{class_m_d5_afdab8c1ad9a976589f78a64c534d2c54}{MD5Update()} and \hyperlink{class_m_d5_af527ca99477e2cff37a4f1952bcc7f90}{MD5Final()}. If you want to create a hash based on a string or file quickly you should use the \hyperlink{classmd5wrapper}{md5wrapper} class instead of \hyperlink{class_m_d5}{MD5}. 
+
+Definition at line 108 of file hl\_\-md5.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_m_d5_afa6155ec36de415ab2dcf5e54b670d13}{
+\index{MD5@{MD5}!MD5@{MD5}}
+\index{MD5@{MD5}!MD5@{MD5}}
+\subsubsection[{MD5}]{\setlength{\rightskip}{0pt plus 5cm}MD5::MD5 ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_m_d5_afa6155ec36de415ab2dcf5e54b670d13}
+
+
+default constructor 
+
+Definition at line 195 of file hl\_\-md5.h.
+
+\subsection{Member Function Documentation}
+\hypertarget{class_m_d5_af527ca99477e2cff37a4f1952bcc7f90}{
+\index{MD5@{MD5}!MD5Final@{MD5Final}}
+\index{MD5Final@{MD5Final}!MD5@{MD5}}
+\subsubsection[{MD5Final}]{\setlength{\rightskip}{0pt plus 5cm}void MD5::MD5Final (unsigned char {\em digest}\mbox{[}16\mbox{]}, \/  {\bf MD5\_\-CTX} $\ast$ {\em context})}}
+\label{class_m_d5_af527ca99477e2cff37a4f1952bcc7f90}
+
+
+Finalization ends the md5 message-\/digest operation, writing the the message digest and zeroizing the context. 
+\begin{DoxyParams}{Parameters}
+\item[{\em digest}]This is an OUT parameter which contains the created hash after the method returns \item[{\em context}]The context to finalize \end{DoxyParams}
+
+
+Definition at line 375 of file hl\_\-md5.cpp.\hypertarget{class_m_d5_ad7a5fd3b9b97865ded5ac8ecd24905fc}{
+\index{MD5@{MD5}!MD5Init@{MD5Init}}
+\index{MD5Init@{MD5Init}!MD5@{MD5}}
+\subsubsection[{MD5Init}]{\setlength{\rightskip}{0pt plus 5cm}void MD5::MD5Init ({\bf MD5\_\-CTX} $\ast$ {\em context})}}
+\label{class_m_d5_ad7a5fd3b9b97865ded5ac8ecd24905fc}
+
+
+Initialization begins an operation, writing a new context. 
+\begin{DoxyParams}{Parameters}
+\item[{\em context}]The \hyperlink{struct_m_d5___c_t_x}{MD5\_\-CTX} context to initialize \end{DoxyParams}
+
+
+Definition at line 313 of file hl\_\-md5.cpp.\hypertarget{class_m_d5_afdab8c1ad9a976589f78a64c534d2c54}{
+\index{MD5@{MD5}!MD5Update@{MD5Update}}
+\index{MD5Update@{MD5Update}!MD5@{MD5}}
+\subsubsection[{MD5Update}]{\setlength{\rightskip}{0pt plus 5cm}void MD5::MD5Update ({\bf MD5\_\-CTX} $\ast$ {\em context}, \/  unsigned char $\ast$ {\em input}, \/  unsigned int {\em inputLen})}}
+\label{class_m_d5_afdab8c1ad9a976589f78a64c534d2c54}
+
+
+Block update operation. Continues an md5 message-\/digest operation, processing another message block, and updating the context. 
+\begin{DoxyParams}{Parameters}
+\item[{\em context}]The \hyperlink{struct_m_d5___c_t_x}{MD5\_\-CTX} context to update \item[{\em input}]The data to write into the context \item[{\em inputLen}]The length of the input data \end{DoxyParams}
+
+
+Definition at line 330 of file hl\_\-md5.cpp.
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+G:/Course Work/Engineering/Engineering HWK/COEN 345/c345pV1.0.1/c345pV1.0.1/c345Project/c345Project/hashlib/\hyperlink{hl__md5_8h}{hl\_\-md5.h}\item 
+G:/Course Work/Engineering/Engineering HWK/COEN 345/c345pV1.0.1/c345pV1.0.1/c345Project/c345Project/hashlib/\hyperlink{hl__md5_8cpp}{hl\_\-md5.cpp}\end{DoxyCompactItemize}

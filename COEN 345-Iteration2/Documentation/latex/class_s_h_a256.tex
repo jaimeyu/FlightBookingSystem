@@ -1,0 +1,64 @@
+\hypertarget{class_s_h_a256}{
+\section{SHA256 Class Reference}
+\label{class_s_h_a256}\index{SHA256@{SHA256}}
+}
+
+
+This class represents the implementation of the sha256 algorithm.  
+
+
+{\ttfamily \#include $<$hl\_\-sha256.h$>$}\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_s_h_a256_aeb6ef21e200e3ad135d61a97ffa6fb77}{SHA256\_\-Init} (\hyperlink{struct_s_h_a256___c_t_x}{SHA256\_\-CTX} $\ast$context)
+\begin{DoxyCompactList}\small\item\em Initialize the context. \item\end{DoxyCompactList}\item 
+void \hyperlink{class_s_h_a256_a8538cc8feb0a8edcfc418492311c4494}{SHA256\_\-Update} (\hyperlink{struct_s_h_a256___c_t_x}{SHA256\_\-CTX} $\ast$context, const \hyperlink{hl__types_8h_adc1917ae5f0dc40725be12536ffe0a6c}{hl\_\-uint8} $\ast$data, unsigned int len)
+\begin{DoxyCompactList}\small\item\em Updates the context. \item\end{DoxyCompactList}\item 
+char $\ast$ \hyperlink{class_s_h_a256_a49aa12cde1048474ded31dd682993b1d}{SHA256\_\-End} (\hyperlink{struct_s_h_a256___c_t_x}{SHA256\_\-CTX} $\ast$context, char buffer\mbox{[}SHA256\_\-DIGEST\_\-STRING\_\-LENGTH\mbox{]})
+\begin{DoxyCompactList}\small\item\em Ends the sha256 operation and return the created hash in the given buffer. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This class represents the implementation of the sha256 algorithm. Basically the class provides three public member-\/functions to create a hash: \hyperlink{class_s_h_a256_aeb6ef21e200e3ad135d61a97ffa6fb77}{SHA256\_\-Init()}, \hyperlink{class_s_h_a256_a8538cc8feb0a8edcfc418492311c4494}{SHA256\_\-Update()} and \hyperlink{class_s_h_a256_a49aa12cde1048474ded31dd682993b1d}{SHA256\_\-End()}. If you want to create a hash based on a string or file quickly you should use the \hyperlink{classsha256wrapper}{sha256wrapper} class instead of \hyperlink{class_s_h_a256}{SHA256}. 
+
+Definition at line 137 of file hl\_\-sha256.h.
+
+\subsection{Member Function Documentation}
+\hypertarget{class_s_h_a256_a49aa12cde1048474ded31dd682993b1d}{
+\index{SHA256@{SHA256}!SHA256\_\-End@{SHA256\_\-End}}
+\index{SHA256\_\-End@{SHA256\_\-End}!SHA256@{SHA256}}
+\subsubsection[{SHA256\_\-End}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ SHA256::SHA256\_\-End ({\bf SHA256\_\-CTX} $\ast$ {\em context}, \/  char {\em buffer}\mbox{[}SHA256\_\-DIGEST\_\-STRING\_\-LENGTH\mbox{]})}}
+\label{class_s_h_a256_a49aa12cde1048474ded31dd682993b1d}
+
+
+Ends the sha256 operation and return the created hash in the given buffer. 
+\begin{DoxyParams}{Parameters}
+\item[{\em context}]The context to end. \item[{\em buffer}]This OUT-\/Parameter contains the created hash after ending the operation. \end{DoxyParams}
+\hypertarget{class_s_h_a256_aeb6ef21e200e3ad135d61a97ffa6fb77}{
+\index{SHA256@{SHA256}!SHA256\_\-Init@{SHA256\_\-Init}}
+\index{SHA256\_\-Init@{SHA256\_\-Init}!SHA256@{SHA256}}
+\subsubsection[{SHA256\_\-Init}]{\setlength{\rightskip}{0pt plus 5cm}void SHA256::SHA256\_\-Init ({\bf SHA256\_\-CTX} $\ast$ {\em context})}}
+\label{class_s_h_a256_aeb6ef21e200e3ad135d61a97ffa6fb77}
+
+
+Initialize the context. 
+\begin{DoxyParams}{Parameters}
+\item[{\em context}]The context to init. \end{DoxyParams}
+
+
+Definition at line 136 of file hl\_\-sha256.cpp.\hypertarget{class_s_h_a256_a8538cc8feb0a8edcfc418492311c4494}{
+\index{SHA256@{SHA256}!SHA256\_\-Update@{SHA256\_\-Update}}
+\index{SHA256\_\-Update@{SHA256\_\-Update}!SHA256@{SHA256}}
+\subsubsection[{SHA256\_\-Update}]{\setlength{\rightskip}{0pt plus 5cm}void SHA256::SHA256\_\-Update ({\bf SHA256\_\-CTX} $\ast$ {\em context}, \/  const {\bf hl\_\-uint8} $\ast$ {\em data}, \/  unsigned int {\em len})}}
+\label{class_s_h_a256_a8538cc8feb0a8edcfc418492311c4494}
+
+
+Updates the context. 
+\begin{DoxyParams}{Parameters}
+\item[{\em context}]The context to update. \item[{\em data}]The data for updating the context. \item[{\em len}]The length of the given data. \end{DoxyParams}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+G:/Course Work/Engineering/Engineering HWK/COEN 345/c345pV1.0.1/c345pV1.0.1/c345Project/c345Project/hashlib/\hyperlink{hl__sha256_8h}{hl\_\-sha256.h}\item 
+G:/Course Work/Engineering/Engineering HWK/COEN 345/c345pV1.0.1/c345pV1.0.1/c345Project/c345Project/hashlib/\hyperlink{hl__sha256_8cpp}{hl\_\-sha256.cpp}\end{DoxyCompactItemize}

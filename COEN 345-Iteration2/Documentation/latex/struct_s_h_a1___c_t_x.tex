@@ -1,0 +1,88 @@
+\hypertarget{struct_s_h_a1___c_t_x}{
+\section{SHA1\_\-CTX Struct Reference}
+\label{struct_s_h_a1___c_t_x}\index{SHA1\_\-CTX@{SHA1\_\-CTX}}
+}
+
+
+this struct represents a SHA1-\/hash context.  
+
+
+{\ttfamily \#include $<$hl\_\-sha1.h$>$}\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{hl__types_8h_ae2fe08a06e4f429c5519ec9865f304d6}{hl\_\-uint32} \hyperlink{struct_s_h_a1___c_t_x_a002bb4717d18473dd068b0107fad99fb}{Intermediate\_\-Hash} \mbox{[}SHA1HashSize/4\mbox{]}
+\item 
+\hyperlink{hl__types_8h_ae2fe08a06e4f429c5519ec9865f304d6}{hl\_\-uint32} \hyperlink{struct_s_h_a1___c_t_x_ad7fa6a9c4bc5b5a973e43f295d47130b}{Length\_\-Low}
+\item 
+\hyperlink{hl__types_8h_ae2fe08a06e4f429c5519ec9865f304d6}{hl\_\-uint32} \hyperlink{struct_s_h_a1___c_t_x_a0cf6238687324137a7af1d551a035c5e}{Length\_\-High}
+\item 
+\hyperlink{hl__types_8h_a2ca38fd7cd0dbcd4c551471bea0714a0}{hl\_\-uint16} \hyperlink{struct_s_h_a1___c_t_x_a201652163346284bc0798699fb96e8df}{Message\_\-Block\_\-Index}
+\item 
+\hyperlink{hl__types_8h_adc1917ae5f0dc40725be12536ffe0a6c}{hl\_\-uint8} \hyperlink{struct_s_h_a1___c_t_x_a54029eb96289c03362de738f6608aa70}{Message\_\-Block} \mbox{[}64\mbox{]}
+\item 
+int \hyperlink{struct_s_h_a1___c_t_x_a53cdb3c7d748328da6a7cc631998ed27}{Computed}
+\item 
+int \hyperlink{struct_s_h_a1___c_t_x_adfe095bb242ae3900dcecf9fe137f6e8}{Corrupted}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+this struct represents a SHA1-\/hash context. 
+
+Definition at line 103 of file hl\_\-sha1.h.
+
+\subsection{Member Data Documentation}
+\hypertarget{struct_s_h_a1___c_t_x_a53cdb3c7d748328da6a7cc631998ed27}{
+\index{SHA1\_\-CTX@{SHA1\_\-CTX}!Computed@{Computed}}
+\index{Computed@{Computed}!SHA1_CTX@{SHA1\_\-CTX}}
+\subsubsection[{Computed}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf SHA1\_\-CTX::Computed}}}
+\label{struct_s_h_a1___c_t_x_a53cdb3c7d748328da6a7cc631998ed27}
+Is the digest computed? 
+
+Definition at line 121 of file hl\_\-sha1.h.\hypertarget{struct_s_h_a1___c_t_x_adfe095bb242ae3900dcecf9fe137f6e8}{
+\index{SHA1\_\-CTX@{SHA1\_\-CTX}!Corrupted@{Corrupted}}
+\index{Corrupted@{Corrupted}!SHA1_CTX@{SHA1\_\-CTX}}
+\subsubsection[{Corrupted}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf SHA1\_\-CTX::Corrupted}}}
+\label{struct_s_h_a1___c_t_x_adfe095bb242ae3900dcecf9fe137f6e8}
+Is the message digest corrupted? 
+
+Definition at line 124 of file hl\_\-sha1.h.\hypertarget{struct_s_h_a1___c_t_x_a002bb4717d18473dd068b0107fad99fb}{
+\index{SHA1\_\-CTX@{SHA1\_\-CTX}!Intermediate\_\-Hash@{Intermediate\_\-Hash}}
+\index{Intermediate\_\-Hash@{Intermediate\_\-Hash}!SHA1_CTX@{SHA1\_\-CTX}}
+\subsubsection[{Intermediate\_\-Hash}]{\setlength{\rightskip}{0pt plus 5cm}{\bf hl\_\-uint32} {\bf SHA1\_\-CTX::Intermediate\_\-Hash}\mbox{[}SHA1HashSize/4\mbox{]}}}
+\label{struct_s_h_a1___c_t_x_a002bb4717d18473dd068b0107fad99fb}
+Message Digest 
+
+Definition at line 106 of file hl\_\-sha1.h.\hypertarget{struct_s_h_a1___c_t_x_a0cf6238687324137a7af1d551a035c5e}{
+\index{SHA1\_\-CTX@{SHA1\_\-CTX}!Length\_\-High@{Length\_\-High}}
+\index{Length\_\-High@{Length\_\-High}!SHA1_CTX@{SHA1\_\-CTX}}
+\subsubsection[{Length\_\-High}]{\setlength{\rightskip}{0pt plus 5cm}{\bf hl\_\-uint32} {\bf SHA1\_\-CTX::Length\_\-High}}}
+\label{struct_s_h_a1___c_t_x_a0cf6238687324137a7af1d551a035c5e}
+Message length in bits 
+
+Definition at line 112 of file hl\_\-sha1.h.\hypertarget{struct_s_h_a1___c_t_x_ad7fa6a9c4bc5b5a973e43f295d47130b}{
+\index{SHA1\_\-CTX@{SHA1\_\-CTX}!Length\_\-Low@{Length\_\-Low}}
+\index{Length\_\-Low@{Length\_\-Low}!SHA1_CTX@{SHA1\_\-CTX}}
+\subsubsection[{Length\_\-Low}]{\setlength{\rightskip}{0pt plus 5cm}{\bf hl\_\-uint32} {\bf SHA1\_\-CTX::Length\_\-Low}}}
+\label{struct_s_h_a1___c_t_x_ad7fa6a9c4bc5b5a973e43f295d47130b}
+Message length in bits 
+
+Definition at line 109 of file hl\_\-sha1.h.\hypertarget{struct_s_h_a1___c_t_x_a54029eb96289c03362de738f6608aa70}{
+\index{SHA1\_\-CTX@{SHA1\_\-CTX}!Message\_\-Block@{Message\_\-Block}}
+\index{Message\_\-Block@{Message\_\-Block}!SHA1_CTX@{SHA1\_\-CTX}}
+\subsubsection[{Message\_\-Block}]{\setlength{\rightskip}{0pt plus 5cm}{\bf hl\_\-uint8} {\bf SHA1\_\-CTX::Message\_\-Block}\mbox{[}64\mbox{]}}}
+\label{struct_s_h_a1___c_t_x_a54029eb96289c03362de738f6608aa70}
+512-\/bit message blocks 
+
+Definition at line 118 of file hl\_\-sha1.h.\hypertarget{struct_s_h_a1___c_t_x_a201652163346284bc0798699fb96e8df}{
+\index{SHA1\_\-CTX@{SHA1\_\-CTX}!Message\_\-Block\_\-Index@{Message\_\-Block\_\-Index}}
+\index{Message\_\-Block\_\-Index@{Message\_\-Block\_\-Index}!SHA1_CTX@{SHA1\_\-CTX}}
+\subsubsection[{Message\_\-Block\_\-Index}]{\setlength{\rightskip}{0pt plus 5cm}{\bf hl\_\-uint16} {\bf SHA1\_\-CTX::Message\_\-Block\_\-Index}}}
+\label{struct_s_h_a1___c_t_x_a201652163346284bc0798699fb96e8df}
+Index into message block array 
+
+Definition at line 115 of file hl\_\-sha1.h.
+
+The documentation for this struct was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+G:/Course Work/Engineering/Engineering HWK/COEN 345/c345pV1.0.1/c345pV1.0.1/c345Project/c345Project/hashlib/\hyperlink{hl__sha1_8h}{hl\_\-sha1.h}\end{DoxyCompactItemize}

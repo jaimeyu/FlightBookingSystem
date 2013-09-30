@@ -1,0 +1,180 @@
+\hypertarget{classschedule}{
+\section{schedule Class Reference}
+\label{classschedule}\index{schedule@{schedule}}
+}
+
+
+This is the \hyperlink{classschedule}{schedule} object. this is where you store the arrival and departure times.  
+
+
+{\ttfamily \#include $<$schedule.h$>$}\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classschedule_a7e2643447b03e5126dc5dcc27a2dcca4}{
+{\bfseries schedule} (\hyperlink{classday}{day} days, int depHour, int depMin, int flightNumber, bool repeat)}
+\label{classschedule_a7e2643447b03e5126dc5dcc27a2dcca4}
+
+\item 
+\hypertarget{classschedule_a93aebd49fc56f6e48f1e29905ead402c}{
+{\bfseries schedule} (\hyperlink{classday}{day} days, int depHour, int depMin, int flightNumber, int depDate, int depMonth)}
+\label{classschedule_a93aebd49fc56f6e48f1e29905ead402c}
+
+\item 
+\hypertarget{classschedule_a8fd090a01246197f1aaa4f9aac22671d}{
+int {\bfseries getdepDate} ()}
+\label{classschedule_a8fd090a01246197f1aaa4f9aac22671d}
+
+\item 
+\hypertarget{classschedule_a5e53f00c168370662c6db0709826c4e7}{
+int {\bfseries getdepYear} ()}
+\label{classschedule_a5e53f00c168370662c6db0709826c4e7}
+
+\item 
+\hypertarget{classschedule_a2099630112f0b4d299fe78de1eb1610e}{
+int {\bfseries getdepMonth} ()}
+\label{classschedule_a2099630112f0b4d299fe78de1eb1610e}
+
+\item 
+\hypertarget{classschedule_a32249b03e48030f45f9f75660d6f1ad7}{
+\hyperlink{classday}{day} {\bfseries getDay} ()}
+\label{classschedule_a32249b03e48030f45f9f75660d6f1ad7}
+
+\item 
+\hypertarget{classschedule_ac1e6bb6ba4cfd58fbf8d8eb7fe30e117}{
+int {\bfseries getdepHour} ()}
+\label{classschedule_ac1e6bb6ba4cfd58fbf8d8eb7fe30e117}
+
+\item 
+\hypertarget{classschedule_ac73eb663a5152f7ac2b84784b1d02c42}{
+int {\bfseries getdepMin} ()}
+\label{classschedule_ac73eb663a5152f7ac2b84784b1d02c42}
+
+\item 
+\hypertarget{classschedule_a6b8d60e7ad5ad6800834655e197d5b94}{
+bool {\bfseries getRepeat} ()}
+\label{classschedule_a6b8d60e7ad5ad6800834655e197d5b94}
+
+\item 
+\hypertarget{classschedule_ae6a17a326a61bb56a35d560ac8b19f30}{
+void {\bfseries setdepDate} (int depDate)}
+\label{classschedule_ae6a17a326a61bb56a35d560ac8b19f30}
+
+\item 
+\hypertarget{classschedule_aaf4c9cd5c3df98771a1a4b2fd7f9bdfa}{
+void {\bfseries setdepMonth} (int depMonth)}
+\label{classschedule_aaf4c9cd5c3df98771a1a4b2fd7f9bdfa}
+
+\item 
+\hypertarget{classschedule_a22e87219c8294e9de8fbdaa54774b055}{
+void {\bfseries setDay} (\hyperlink{classday}{day} days)}
+\label{classschedule_a22e87219c8294e9de8fbdaa54774b055}
+
+\item 
+\hypertarget{classschedule_a2ed0c928e820268243f50e87a9d3152b}{
+void {\bfseries setdepHour} (int depHour)}
+\label{classschedule_a2ed0c928e820268243f50e87a9d3152b}
+
+\item 
+\hypertarget{classschedule_a4388423852353550ad95e951a6d1a87e}{
+void {\bfseries setdepMin} (int depMin)}
+\label{classschedule_a4388423852353550ad95e951a6d1a87e}
+
+\item 
+\hypertarget{classschedule_a930696bed176346d64fbf7b70ad28f5c}{
+void {\bfseries setdepYear} (int depYear)}
+\label{classschedule_a930696bed176346d64fbf7b70ad28f5c}
+
+\item 
+\hypertarget{classschedule_ab3062e5b711d0598e8270d5dc2f691f5}{
+void {\bfseries setRepeat} (bool repeat)}
+\label{classschedule_ab3062e5b711d0598e8270d5dc2f691f5}
+
+\item 
+\hypertarget{classschedule_adae2e2ee17f360191a634f5aeaa89f40}{
+void {\bfseries setFlightNumber} (int flightNumber)}
+\label{classschedule_adae2e2ee17f360191a634f5aeaa89f40}
+
+\item 
+\hypertarget{classschedule_ae160184dd016a73d9b1c84473a4c6136}{
+bool {\bfseries getCancelled} ()}
+\label{classschedule_ae160184dd016a73d9b1c84473a4c6136}
+
+\item 
+\hypertarget{classschedule_a62a4f0368fb7279a1def845849a9882b}{
+string {\bfseries getReason} ()}
+\label{classschedule_a62a4f0368fb7279a1def845849a9882b}
+
+\item 
+\hypertarget{classschedule_a945ca62360f6ccfc16e9eb7f272122be}{
+void {\bfseries setCancelled} (bool cancelled)}
+\label{classschedule_a945ca62360f6ccfc16e9eb7f272122be}
+
+\item 
+\hypertarget{classschedule_a77abb8a1e0e2133be0b904441d6fd1cc}{
+void {\bfseries setReason} (string reason)}
+\label{classschedule_a77abb8a1e0e2133be0b904441d6fd1cc}
+
+\item 
+\hypertarget{classschedule_a65bae08328fbab1cb6b2563af33ea796}{
+void {\bfseries setPlaneFull} (bool full)}
+\label{classschedule_a65bae08328fbab1cb6b2563af33ea796}
+
+\item 
+\hypertarget{classschedule_a83805ec02548945b269d6893d41c614c}{
+bool {\bfseries isPlanFull} ()}
+\label{classschedule_a83805ec02548945b269d6893d41c614c}
+
+\item 
+\hypertarget{classschedule_a87b22904a4a878fe9c9f543f03263455}{
+int {\bfseries setFlight} (\hyperlink{classflight}{flight} temp)}
+\label{classschedule_a87b22904a4a878fe9c9f543f03263455}
+
+\item 
+\hypertarget{classschedule_a8c865ae254229485909b69d0b2a0be29}{
+\hyperlink{classflight}{flight} {\bfseries getFlight} ()}
+\label{classschedule_a8c865ae254229485909b69d0b2a0be29}
+
+\item 
+\hypertarget{classschedule_a4de86e70a6e4656d1ba33c33e5be6519}{
+void {\bfseries setFlightLength} (int flightLength)}
+\label{classschedule_a4de86e70a6e4656d1ba33c33e5be6519}
+
+\item 
+\hypertarget{classschedule_aa5d8f40511d51bd0c8325efffa3d58ba}{
+int {\bfseries getFlightLength} ()}
+\label{classschedule_aa5d8f40511d51bd0c8325efffa3d58ba}
+
+\item 
+\hypertarget{classschedule_a48e168ec78908aec27acae246c184118}{
+void {\bfseries setBookingDB} (vector$<$ \hyperlink{classflight_manifest}{flightManifest} $>$ booking)}
+\label{classschedule_a48e168ec78908aec27acae246c184118}
+
+\item 
+\hypertarget{classschedule_a5f43a67cfac467570227ded69b566c30}{
+vector$<$ \hyperlink{classflight_manifest}{flightManifest} $>$ {\bfseries getBookingDB} ()}
+\label{classschedule_a5f43a67cfac467570227ded69b566c30}
+
+\item 
+\hypertarget{classschedule_a91534cc700c81dccee0e3594ca491be2}{
+\hyperlink{classflight_manifest}{flightManifest} {\bfseries getBookDB} ()}
+\label{classschedule_a91534cc700c81dccee0e3594ca491be2}
+
+\item 
+\hypertarget{classschedule_aa0d53d992e3b6f7efa312807ddb2e7fd}{
+vector$<$ \hyperlink{classbooking_info}{bookingInfo} $>$ {\bfseries getBook} ()}
+\label{classschedule_aa0d53d992e3b6f7efa312807ddb2e7fd}
+
+\item 
+\hypertarget{classschedule_a6036e45cfea7c909940e64951cd69926}{
+void {\bfseries setBook} (vector$<$ \hyperlink{classbooking_info}{bookingInfo} $>$ book)}
+\label{classschedule_a6036e45cfea7c909940e64951cd69926}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This is the \hyperlink{classschedule}{schedule} object. this is where you store the arrival and departure times. 
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+C:/Users/Jaime/Desktop/Lab2+(4)/Lab2/Lab2-\/Group1/c345Project/schedule.h\end{DoxyCompactItemize}

@@ -1,0 +1,157 @@
+\hypertarget{classmd5wrapper}{
+\section{md5wrapper Class Reference}
+\label{classmd5wrapper}\index{md5wrapper@{md5wrapper}}
+}
+
+
+This class represents the \hyperlink{class_m_d5}{MD5} wrapper-\/class.  
+
+
+{\ttfamily \#include $<$hl\_\-md5wrapper.h$>$}Inheritance diagram for md5wrapper::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2cm]{classmd5wrapper}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classmd5wrapper_aae8138b76b89d93a4c21077b76d57c07}{md5wrapper} ()
+\begin{DoxyCompactList}\small\item\em default constructor \item\end{DoxyCompactList}\item 
+virtual \hyperlink{classmd5wrapper_a65e78258ad508d83be81d395f8bd43f4}{$\sim$md5wrapper} ()
+\begin{DoxyCompactList}\small\item\em default destructor \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual std::string \hyperlink{classmd5wrapper_ab146103eb1283aaf0a83ae5e8101af26}{hashIt} (void)
+\begin{DoxyCompactList}\small\item\em This method ends the hash process and returns the hash as string. \item\end{DoxyCompactList}\item 
+virtual std::string \hyperlink{classmd5wrapper_a4b2bd3d8cb53e4f24d843b1c17089c9c}{convToString} (unsigned char $\ast$data)
+\begin{DoxyCompactList}\small\item\em This internal member-\/function convertes the hash-\/data to a std::string (HEX). \item\end{DoxyCompactList}\item 
+virtual void \hyperlink{classmd5wrapper_a6ab84182cd32d43f5fd05bfb68bbc133}{updateContext} (unsigned char $\ast$data, unsigned int len)
+\begin{DoxyCompactList}\small\item\em This method adds the given data to the current hash context. \item\end{DoxyCompactList}\item 
+virtual void \hyperlink{classmd5wrapper_a1e96064bfbb4156962d419f87ad684aa}{resetContext} (void)
+\begin{DoxyCompactList}\small\item\em This method resets the current hash context. In other words: It starts a new hash process. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_m_d5}{MD5} $\ast$ \hyperlink{classmd5wrapper_afe675f7d8993ec64ddefa902dff431fa}{md5}
+\item 
+\hyperlink{struct_m_d5___c_t_x}{MD5\_\-CTX} \hyperlink{classmd5wrapper_a00cf50f92e684cdaf85f6a5c1d1ac2dd}{ctx}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This class represents the \hyperlink{class_m_d5}{MD5} wrapper-\/class. You can use this class to easily create a md5 hash. Just create an instance of \hyperlink{classmd5wrapper}{md5wrapper} and call the inherited memberfunctions \hyperlink{classhashwrapper_aa10904f0dc06eb54771ab26864622d0f}{getHashFromString()} and \hyperlink{classhashwrapper_ae4767e76e6d9e2b24b41f01ab9e7f03c}{getHashFromFile()} to create a hash based on a string or a file.
+
+Have a look at the following example:
+
+
+\begin{DoxyCodeInclude}
+\end{DoxyCodeInclude}
+
+
+\hyperlink{classmd5wrapper}{md5wrapper} implements \hyperlink{classmd5wrapper_a1e96064bfbb4156962d419f87ad684aa}{resetContext()}, \hyperlink{classmd5wrapper_a6ab84182cd32d43f5fd05bfb68bbc133}{updateContext()} and \hyperlink{classmd5wrapper_ab146103eb1283aaf0a83ae5e8101af26}{hashIt()} to create a hash. 
+
+Definition at line 70 of file hl\_\-md5wrapper.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classmd5wrapper_aae8138b76b89d93a4c21077b76d57c07}{
+\index{md5wrapper@{md5wrapper}!md5wrapper@{md5wrapper}}
+\index{md5wrapper@{md5wrapper}!md5wrapper@{md5wrapper}}
+\subsubsection[{md5wrapper}]{\setlength{\rightskip}{0pt plus 5cm}md5wrapper::md5wrapper ()}}
+\label{classmd5wrapper_aae8138b76b89d93a4c21077b76d57c07}
+
+
+default constructor 
+
+Definition at line 136 of file hl\_\-md5wrapper.cpp.\hypertarget{classmd5wrapper_a65e78258ad508d83be81d395f8bd43f4}{
+\index{md5wrapper@{md5wrapper}!$\sim$md5wrapper@{$\sim$md5wrapper}}
+\index{$\sim$md5wrapper@{$\sim$md5wrapper}!md5wrapper@{md5wrapper}}
+\subsubsection[{$\sim$md5wrapper}]{\setlength{\rightskip}{0pt plus 5cm}md5wrapper::$\sim$md5wrapper ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classmd5wrapper_a65e78258ad508d83be81d395f8bd43f4}
+
+
+default destructor 
+
+Definition at line 144 of file hl\_\-md5wrapper.cpp.
+
+\subsection{Member Function Documentation}
+\hypertarget{classmd5wrapper_a4b2bd3d8cb53e4f24d843b1c17089c9c}{
+\index{md5wrapper@{md5wrapper}!convToString@{convToString}}
+\index{convToString@{convToString}!md5wrapper@{md5wrapper}}
+\subsubsection[{convToString}]{\setlength{\rightskip}{0pt plus 5cm}std::string md5wrapper::convToString (unsigned char $\ast$ {\em bytes})\hspace{0.3cm}{\ttfamily  \mbox{[}protected, virtual\mbox{]}}}}
+\label{classmd5wrapper_a4b2bd3d8cb53e4f24d843b1c17089c9c}
+
+
+This internal member-\/function convertes the hash-\/data to a std::string (HEX). 
+\begin{DoxyParams}{Parameters}
+\item[{\em data}]The hash-\/data to covert into HEX \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the converted data as std::string 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classhashwrapper_a1dacf43b1b726cd19a09d11eba6cd082}{hashwrapper}.
+
+Definition at line 76 of file hl\_\-md5wrapper.cpp.\hypertarget{classmd5wrapper_ab146103eb1283aaf0a83ae5e8101af26}{
+\index{md5wrapper@{md5wrapper}!hashIt@{hashIt}}
+\index{hashIt@{hashIt}!md5wrapper@{md5wrapper}}
+\subsubsection[{hashIt}]{\setlength{\rightskip}{0pt plus 5cm}std::string md5wrapper::hashIt (void)\hspace{0.3cm}{\ttfamily  \mbox{[}protected, virtual\mbox{]}}}}
+\label{classmd5wrapper_ab146103eb1283aaf0a83ae5e8101af26}
+
+
+This method ends the hash process and returns the hash as string. \begin{DoxyReturn}{Returns}
+the hash as std::string 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classhashwrapper_a53f97c06885ed2b1fa255759a957a782}{hashwrapper}.
+
+Definition at line 58 of file hl\_\-md5wrapper.cpp.\hypertarget{classmd5wrapper_a1e96064bfbb4156962d419f87ad684aa}{
+\index{md5wrapper@{md5wrapper}!resetContext@{resetContext}}
+\index{resetContext@{resetContext}!md5wrapper@{md5wrapper}}
+\subsubsection[{resetContext}]{\setlength{\rightskip}{0pt plus 5cm}void md5wrapper::resetContext (void)\hspace{0.3cm}{\ttfamily  \mbox{[}protected, virtual\mbox{]}}}}
+\label{classmd5wrapper_a1e96064bfbb4156962d419f87ad684aa}
+
+
+This method resets the current hash context. In other words: It starts a new hash process. 
+
+Implements \hyperlink{classhashwrapper_aa7d46e9630a794ff08cfb5307660a86d}{hashwrapper}.
+
+Definition at line 124 of file hl\_\-md5wrapper.cpp.\hypertarget{classmd5wrapper_a6ab84182cd32d43f5fd05bfb68bbc133}{
+\index{md5wrapper@{md5wrapper}!updateContext@{updateContext}}
+\index{updateContext@{updateContext}!md5wrapper@{md5wrapper}}
+\subsubsection[{updateContext}]{\setlength{\rightskip}{0pt plus 5cm}void md5wrapper::updateContext (unsigned char $\ast$ {\em data}, \/  unsigned int {\em len})\hspace{0.3cm}{\ttfamily  \mbox{[}protected, virtual\mbox{]}}}}
+\label{classmd5wrapper_a6ab84182cd32d43f5fd05bfb68bbc133}
+
+
+This method adds the given data to the current hash context. 
+\begin{DoxyParams}{Parameters}
+\item[{\em data}]The data to add to the current context \item[{\em len}]The length of the data to add \end{DoxyParams}
+
+
+Implements \hyperlink{classhashwrapper_a7fe42ccf310e7d2cfe95f61732b73197}{hashwrapper}.
+
+Definition at line 114 of file hl\_\-md5wrapper.cpp.
+
+\subsection{Member Data Documentation}
+\hypertarget{classmd5wrapper_a00cf50f92e684cdaf85f6a5c1d1ac2dd}{
+\index{md5wrapper@{md5wrapper}!ctx@{ctx}}
+\index{ctx@{ctx}!md5wrapper@{md5wrapper}}
+\subsubsection[{ctx}]{\setlength{\rightskip}{0pt plus 5cm}{\bf MD5\_\-CTX} {\bf md5wrapper::ctx}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classmd5wrapper_a00cf50f92e684cdaf85f6a5c1d1ac2dd}
+\hyperlink{class_m_d5}{MD5} context 
+
+Definition at line 82 of file hl\_\-md5wrapper.h.\hypertarget{classmd5wrapper_afe675f7d8993ec64ddefa902dff431fa}{
+\index{md5wrapper@{md5wrapper}!md5@{md5}}
+\index{md5@{md5}!md5wrapper@{md5wrapper}}
+\subsubsection[{md5}]{\setlength{\rightskip}{0pt plus 5cm}{\bf MD5}$\ast$ {\bf md5wrapper::md5}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classmd5wrapper_afe675f7d8993ec64ddefa902dff431fa}
+\hyperlink{class_m_d5}{MD5} access 
+
+Definition at line 77 of file hl\_\-md5wrapper.h.
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+G:/Course Work/Engineering/Engineering HWK/COEN 345/c345pV1.0.1/c345pV1.0.1/c345Project/c345Project/hashlib/\hyperlink{hl__md5wrapper_8h}{hl\_\-md5wrapper.h}\item 
+G:/Course Work/Engineering/Engineering HWK/COEN 345/c345pV1.0.1/c345pV1.0.1/c345Project/c345Project/hashlib/\hyperlink{hl__md5wrapper_8cpp}{hl\_\-md5wrapper.cpp}\end{DoxyCompactItemize}

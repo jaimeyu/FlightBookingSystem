@@ -1,0 +1,78 @@
+\hypertarget{classfileops}{
+\section{fileops Class Reference}
+\label{classfileops}\index{fileops@{fileops}}
+}
+
+
+{\ttfamily \#include $<$fileops.h$>$}\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classfileops_a4a5ae75f8b1529001d710bce3e2f1c30}{fileops} ()
+\item 
+bool \hyperlink{classfileops_a978fbcad1782aae513c2690bd43985c3}{hashCheck} ()
+\begin{DoxyCompactList}\small\item\em constructor \item\end{DoxyCompactList}\item 
+\hypertarget{classfileops_ac05aff8afc2232d4407428a17177760d}{
+bool {\bfseries fileExist} ()}
+\label{classfileops_ac05aff8afc2232d4407428a17177760d}
+
+\item 
+vector$<$ \hyperlink{classschedule}{schedule} $>$ \hyperlink{classfileops_ae29d933450817ab66cd743382ce65226}{ReadFromFile} ()
+\item 
+int \hyperlink{classfileops_a19786cd653a381ba6b185cfbab4efb0a}{writeToFile} (vector$<$ \hyperlink{classschedule}{schedule} $>$ list)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+this is the file input and output class. the application can store its data to a file and then reload the data from the file into applicaiton memory.
+
+A neat trick is that I used a MD5 hash to discover database file corruption.this does MD5 checksum. DO NOT DISTRIBUTE THE BINARY/LIBRARY W/OUT ITS LICENSE. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classfileops_a4a5ae75f8b1529001d710bce3e2f1c30}{
+\index{fileops@{fileops}!fileops@{fileops}}
+\index{fileops@{fileops}!fileops@{fileops}}
+\subsubsection[{fileops}]{\setlength{\rightskip}{0pt plus 5cm}fileops::fileops ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classfileops_a4a5ae75f8b1529001d710bce3e2f1c30}
+
+
+MODIFY THIS if you change the database location. 
+
+\subsection{Member Function Documentation}
+\hypertarget{classfileops_a978fbcad1782aae513c2690bd43985c3}{
+\index{fileops@{fileops}!hashCheck@{hashCheck}}
+\index{hashCheck@{hashCheck}!fileops@{fileops}}
+\subsubsection[{hashCheck}]{\setlength{\rightskip}{0pt plus 5cm}bool fileops::hashCheck ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classfileops_a978fbcad1782aae513c2690bd43985c3}
+
+
+constructor 
+
+checks if the database file has been corrupted. \hypertarget{classfileops_ae29d933450817ab66cd743382ce65226}{
+\index{fileops@{fileops}!ReadFromFile@{ReadFromFile}}
+\index{ReadFromFile@{ReadFromFile}!fileops@{fileops}}
+\subsubsection[{ReadFromFile}]{\setlength{\rightskip}{0pt plus 5cm}vector$<${\bf schedule}$>$ fileops::ReadFromFile ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classfileops_ae29d933450817ab66cd743382ce65226}
+
+
+algorithm
+
+\hyperlink{classflight}{flight}
+
+\hyperlink{classschedule}{schedule}
+
+make sure we don't store unknowns into app. \hypertarget{classfileops_a19786cd653a381ba6b185cfbab4efb0a}{
+\index{fileops@{fileops}!writeToFile@{writeToFile}}
+\index{writeToFile@{writeToFile}!fileops@{fileops}}
+\subsubsection[{writeToFile}]{\setlength{\rightskip}{0pt plus 5cm}int fileops::writeToFile (vector$<$ {\bf schedule} $>$ {\em list})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classfileops_a19786cd653a381ba6b185cfbab4efb0a}
+
+
+write the \hyperlink{classflight}{flight} data for this \hyperlink{classschedule}{schedule}
+
+write \hyperlink{classschedule}{schedule} data to file
+
+write Repeat bool 
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+C:/Users/Jaime/Desktop/Lab2+(4)/Lab2/Lab2-\/Group1/c345Project/fileops.h\end{DoxyCompactItemize}

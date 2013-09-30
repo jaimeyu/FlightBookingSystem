@@ -1,0 +1,76 @@
+\hypertarget{class_s_h_a1}{
+\section{SHA1 Class Reference}
+\label{class_s_h_a1}\index{SHA1@{SHA1}}
+}
+
+
+This class represents the implementation of the sha1 algorithm.  
+
+
+{\ttfamily \#include $<$hl\_\-sha1.h$>$}\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{class_s_h_a1_a03a92bcc340163fc0cff4050fa51619f}{SHA1Reset} (\hyperlink{struct_s_h_a1___c_t_x}{SHA1\_\-CTX} $\ast$context)
+\begin{DoxyCompactList}\small\item\em Resets the sha1 context and starts a new hashprocess. \item\end{DoxyCompactList}\item 
+int \hyperlink{class_s_h_a1_ab4e33d976b42b7b9df3fa31f17a374ad}{SHA1Input} (\hyperlink{struct_s_h_a1___c_t_x}{SHA1\_\-CTX} $\ast$context, const \hyperlink{hl__types_8h_adc1917ae5f0dc40725be12536ffe0a6c}{hl\_\-uint8} $\ast$message\_\-array, unsigned int length)
+\begin{DoxyCompactList}\small\item\em Data input. \item\end{DoxyCompactList}\item 
+int \hyperlink{class_s_h_a1_a0d036511ed4730fc4b575b57efc8cacf}{SHA1Result} (\hyperlink{struct_s_h_a1___c_t_x}{SHA1\_\-CTX} $\ast$context, \hyperlink{hl__types_8h_adc1917ae5f0dc40725be12536ffe0a6c}{hl\_\-uint8} Message\_\-Digest\mbox{[}SHA1HashSize\mbox{]})
+\begin{DoxyCompactList}\small\item\em This ends the sha operation, zeroizing the context and returning the computed hash. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This class represents the implementation of the sha1 algorithm. Basically the class provides three public member-\/functions to create a hash: \hyperlink{class_s_h_a1_a03a92bcc340163fc0cff4050fa51619f}{SHA1Reset()}, \hyperlink{class_s_h_a1_ab4e33d976b42b7b9df3fa31f17a374ad}{SHA1Input()} and \hyperlink{class_s_h_a1_a0d036511ed4730fc4b575b57efc8cacf}{SHA1Result()}. If you want to create a hash based on a string or file quickly you should use the \hyperlink{classsha1wrapper}{sha1wrapper} class instead of \hyperlink{class_s_h_a1}{SHA1}. 
+
+Definition at line 140 of file hl\_\-sha1.h.
+
+\subsection{Member Function Documentation}
+\hypertarget{class_s_h_a1_ab4e33d976b42b7b9df3fa31f17a374ad}{
+\index{SHA1@{SHA1}!SHA1Input@{SHA1Input}}
+\index{SHA1Input@{SHA1Input}!SHA1@{SHA1}}
+\subsubsection[{SHA1Input}]{\setlength{\rightskip}{0pt plus 5cm}int SHA1::SHA1Input ({\bf SHA1\_\-CTX} $\ast$ {\em context}, \/  const {\bf hl\_\-uint8} $\ast$ {\em message\_\-array}, \/  unsigned int {\em length})}}
+\label{class_s_h_a1_ab4e33d976b42b7b9df3fa31f17a374ad}
+
+
+Data input. This memberfunction add data to the specified context.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em context}]The context to add data to \item[{\em message\_\-array}]The data to add \item[{\em length}]The length of the data to add \end{DoxyParams}
+
+
+Definition at line 290 of file hl\_\-sha1.cpp.\hypertarget{class_s_h_a1_a03a92bcc340163fc0cff4050fa51619f}{
+\index{SHA1@{SHA1}!SHA1Reset@{SHA1Reset}}
+\index{SHA1Reset@{SHA1Reset}!SHA1@{SHA1}}
+\subsubsection[{SHA1Reset}]{\setlength{\rightskip}{0pt plus 5cm}int SHA1::SHA1Reset ({\bf SHA1\_\-CTX} $\ast$ {\em context})}}
+\label{class_s_h_a1_a03a92bcc340163fc0cff4050fa51619f}
+
+
+Resets the sha1 context and starts a new hashprocess. 
+\begin{DoxyParams}{Parameters}
+\item[{\em context}]The context to reset \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 on succes an error number otherwise 
+\end{DoxyReturn}
+
+
+Definition at line 257 of file hl\_\-sha1.cpp.\hypertarget{class_s_h_a1_a0d036511ed4730fc4b575b57efc8cacf}{
+\index{SHA1@{SHA1}!SHA1Result@{SHA1Result}}
+\index{SHA1Result@{SHA1Result}!SHA1@{SHA1}}
+\subsubsection[{SHA1Result}]{\setlength{\rightskip}{0pt plus 5cm}int SHA1::SHA1Result ({\bf SHA1\_\-CTX} $\ast$ {\em context}, \/  {\bf hl\_\-uint8} {\em Message\_\-Digest}\mbox{[}SHA1HashSize\mbox{]})}}
+\label{class_s_h_a1_a0d036511ed4730fc4b575b57efc8cacf}
+
+
+This ends the sha operation, zeroizing the context and returning the computed hash. 
+\begin{DoxyParams}{Parameters}
+\item[{\em context}]The context to get the hash from \item[{\em Message\_\-Digest}]This is an OUT parameter which contains the hash after the menberfunction returns \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 on succes, an error-\/code otherwise 
+\end{DoxyReturn}
+
+
+Definition at line 350 of file hl\_\-sha1.cpp.
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+G:/Course Work/Engineering/Engineering HWK/COEN 345/c345pV1.0.1/c345pV1.0.1/c345Project/c345Project/hashlib/\hyperlink{hl__sha1_8h}{hl\_\-sha1.h}\item 
+G:/Course Work/Engineering/Engineering HWK/COEN 345/c345pV1.0.1/c345pV1.0.1/c345Project/c345Project/hashlib/\hyperlink{hl__sha1_8cpp}{hl\_\-sha1.cpp}\end{DoxyCompactItemize}

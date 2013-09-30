@@ -1,0 +1,155 @@
+\hypertarget{classhashwrapper}{
+\section{hashwrapper Class Reference}
+\label{classhashwrapper}\index{hashwrapper@{hashwrapper}}
+}
+
+
+This class represents the baseclass for all subwrappers.  
+
+
+{\ttfamily \#include $<$hl\_\-hashwrapper.h$>$}Inheritance diagram for hashwrapper::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2cm]{classhashwrapper}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \hyperlink{classhashwrapper_a0868440d13aa86a1bccca35e99a81381}{$\sim$hashwrapper} (void)
+\begin{DoxyCompactList}\small\item\em Default destructor. \item\end{DoxyCompactList}\item 
+virtual std::string \hyperlink{classhashwrapper_aa10904f0dc06eb54771ab26864622d0f}{getHashFromString} (std::string text)
+\begin{DoxyCompactList}\small\item\em This method creates a hash based on the given string. \item\end{DoxyCompactList}\item 
+virtual std::string \hyperlink{classhashwrapper_ae4767e76e6d9e2b24b41f01ab9e7f03c}{getHashFromFile} (std::string filename)
+\begin{DoxyCompactList}\small\item\em This method creates a hash from a given file. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual std::string \hyperlink{classhashwrapper_a53f97c06885ed2b1fa255759a957a782}{hashIt} (void)=0
+\begin{DoxyCompactList}\small\item\em This method finalizes the hash process and returns the hash as std::string. \item\end{DoxyCompactList}\item 
+virtual std::string \hyperlink{classhashwrapper_a1dacf43b1b726cd19a09d11eba6cd082}{convToString} (unsigned char $\ast$data)=0
+\begin{DoxyCompactList}\small\item\em This internal member-\/function convertes the hash-\/data to a std::string (HEX). \item\end{DoxyCompactList}\item 
+virtual void \hyperlink{classhashwrapper_a7fe42ccf310e7d2cfe95f61732b73197}{updateContext} (unsigned char $\ast$data, unsigned int len)=0
+\begin{DoxyCompactList}\small\item\em This method adds the given data to the current hash context. \item\end{DoxyCompactList}\item 
+virtual void \hyperlink{classhashwrapper_aa7d46e9630a794ff08cfb5307660a86d}{resetContext} (void)=0
+\begin{DoxyCompactList}\small\item\em This method resets the current hash context. In other words: It starts a new hash process. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This class represents the baseclass for all subwrappers. \hyperlink{classhashwrapper}{hashwrapper} is the abstract base class of all subwrappers like \hyperlink{classmd5wrapper}{md5wrapper} or \hyperlink{classsha1wrapper}{sha1wrapper}. This class implements two simple and easy to use memberfunctions to create a hash based on a string or a file. ( \hyperlink{classhashwrapper_aa10904f0dc06eb54771ab26864622d0f}{getHashFromString()} and \hyperlink{classhashwrapper_ae4767e76e6d9e2b24b41f01ab9e7f03c}{getHashFromFile()} )
+
+\hyperlink{classhashwrapper_aa10904f0dc06eb54771ab26864622d0f}{getHashFromString()} calls \hyperlink{classhashwrapper_aa7d46e9630a794ff08cfb5307660a86d}{resetContext()}, \hyperlink{classhashwrapper_a7fe42ccf310e7d2cfe95f61732b73197}{updateContext()} and \hyperlink{classhashwrapper_a53f97c06885ed2b1fa255759a957a782}{hashIt()} in this order. These three memberfunctions are pure virtual and have to be implemented by the subclasses.
+
+\hyperlink{classhashwrapper_ae4767e76e6d9e2b24b41f01ab9e7f03c}{getHashFromFile()} calls \hyperlink{classhashwrapper_aa7d46e9630a794ff08cfb5307660a86d}{resetContext()} before reading the specified file in 1024 byte blocks which are forwarded to the hash context by calling \hyperlink{classhashwrapper_a7fe42ccf310e7d2cfe95f61732b73197}{updateContext()}. Finaly \hyperlink{classhashwrapper_a53f97c06885ed2b1fa255759a957a782}{hashIt()} is called to return the hash. 
+
+Definition at line 105 of file hl\_\-hashwrapper.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classhashwrapper_a0868440d13aa86a1bccca35e99a81381}{
+\index{hashwrapper@{hashwrapper}!$\sim$hashwrapper@{$\sim$hashwrapper}}
+\index{$\sim$hashwrapper@{$\sim$hashwrapper}!hashwrapper@{hashwrapper}}
+\subsubsection[{$\sim$hashwrapper}]{\setlength{\rightskip}{0pt plus 5cm}virtual hashwrapper::$\sim$hashwrapper (void)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classhashwrapper_a0868440d13aa86a1bccca35e99a81381}
+
+
+Default destructor. 
+
+Definition at line 159 of file hl\_\-hashwrapper.h.
+
+\subsection{Member Function Documentation}
+\hypertarget{classhashwrapper_a1dacf43b1b726cd19a09d11eba6cd082}{
+\index{hashwrapper@{hashwrapper}!convToString@{convToString}}
+\index{convToString@{convToString}!hashwrapper@{hashwrapper}}
+\subsubsection[{convToString}]{\setlength{\rightskip}{0pt plus 5cm}virtual std::string hashwrapper::convToString (unsigned char $\ast$ {\em data})\hspace{0.3cm}{\ttfamily  \mbox{[}protected, pure virtual\mbox{]}}}}
+\label{classhashwrapper_a1dacf43b1b726cd19a09d11eba6cd082}
+
+
+This internal member-\/function convertes the hash-\/data to a std::string (HEX). This memberfunction is pure virtual and has to be implemented by the subclass
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em data}]The hash-\/data to covert into HEX \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The converted data as std::string 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classmd5wrapper_a4b2bd3d8cb53e4f24d843b1c17089c9c}{md5wrapper}, and \hyperlink{classsha1wrapper_a1339f960e306c6bde056191d66001152}{sha1wrapper}.\hypertarget{classhashwrapper_ae4767e76e6d9e2b24b41f01ab9e7f03c}{
+\index{hashwrapper@{hashwrapper}!getHashFromFile@{getHashFromFile}}
+\index{getHashFromFile@{getHashFromFile}!hashwrapper@{hashwrapper}}
+\subsubsection[{getHashFromFile}]{\setlength{\rightskip}{0pt plus 5cm}virtual std::string hashwrapper::getHashFromFile (std::string {\em filename})\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classhashwrapper_ae4767e76e6d9e2b24b41f01ab9e7f03c}
+
+
+This method creates a hash from a given file. First of all \hyperlink{classhashwrapper_aa7d46e9630a794ff08cfb5307660a86d}{resetContext()} is called before reading the specified file in 1024 byte blocks which are forwarded to the hash context by calling \hyperlink{classhashwrapper_a7fe42ccf310e7d2cfe95f61732b73197}{updateContext()}. Finaly \hyperlink{classhashwrapper_a53f97c06885ed2b1fa255759a957a782}{hashIt()} is called to return the hash. These three memberfunctions are pure virtual and have to be implemented by the subclasses.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em filename}]The file to created a hash from\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The created hash of the file or \char`\"{}-\/1\char`\"{} in case the file could not be opened 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+\item[{\em Throws}]a \hyperlink{classhl_exception}{hlException} if the specified file could not be opened. \end{DoxyExceptions}
+
+
+Definition at line 211 of file hl\_\-hashwrapper.h.\hypertarget{classhashwrapper_aa10904f0dc06eb54771ab26864622d0f}{
+\index{hashwrapper@{hashwrapper}!getHashFromString@{getHashFromString}}
+\index{getHashFromString@{getHashFromString}!hashwrapper@{hashwrapper}}
+\subsubsection[{getHashFromString}]{\setlength{\rightskip}{0pt plus 5cm}virtual std::string hashwrapper::getHashFromString (std::string {\em text})\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classhashwrapper_aa10904f0dc06eb54771ab26864622d0f}
+
+
+This method creates a hash based on the given string. This memberfunctions calls \hyperlink{classhashwrapper_aa7d46e9630a794ff08cfb5307660a86d}{resetContext()}, \hyperlink{classhashwrapper_a7fe42ccf310e7d2cfe95f61732b73197}{updateContext()} and \hyperlink{classhashwrapper_a53f97c06885ed2b1fa255759a957a782}{hashIt()} in this order. These three memberfunctions are pure virtual and have to be implemented by the subclasses.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em text}]The text to create a hash from. This parameter is forwarded to \hyperlink{classhashwrapper_a7fe42ccf310e7d2cfe95f61732b73197}{updateContext()} \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the created hash as std::string 
+\end{DoxyReturn}
+
+
+Definition at line 174 of file hl\_\-hashwrapper.h.\hypertarget{classhashwrapper_a53f97c06885ed2b1fa255759a957a782}{
+\index{hashwrapper@{hashwrapper}!hashIt@{hashIt}}
+\index{hashIt@{hashIt}!hashwrapper@{hashwrapper}}
+\subsubsection[{hashIt}]{\setlength{\rightskip}{0pt plus 5cm}virtual std::string hashwrapper::hashIt (void)\hspace{0.3cm}{\ttfamily  \mbox{[}protected, pure virtual\mbox{]}}}}
+\label{classhashwrapper_a53f97c06885ed2b1fa255759a957a782}
+
+
+This method finalizes the hash process and returns the hash as std::string. This memberfunction is pure virtual and has to be implemented by the subclass
+
+\begin{DoxyReturn}{Returns}
+the created hash as std::string 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classmd5wrapper_ab146103eb1283aaf0a83ae5e8101af26}{md5wrapper}, and \hyperlink{classsha1wrapper_a88f493c77f0655eb0b8e577226c49904}{sha1wrapper}.\hypertarget{classhashwrapper_aa7d46e9630a794ff08cfb5307660a86d}{
+\index{hashwrapper@{hashwrapper}!resetContext@{resetContext}}
+\index{resetContext@{resetContext}!hashwrapper@{hashwrapper}}
+\subsubsection[{resetContext}]{\setlength{\rightskip}{0pt plus 5cm}virtual void hashwrapper::resetContext (void)\hspace{0.3cm}{\ttfamily  \mbox{[}protected, pure virtual\mbox{]}}}}
+\label{classhashwrapper_aa7d46e9630a794ff08cfb5307660a86d}
+
+
+This method resets the current hash context. In other words: It starts a new hash process. This memberfunction is pure virtual and has to be implemented by the subclass 
+
+Implemented in \hyperlink{classmd5wrapper_a1e96064bfbb4156962d419f87ad684aa}{md5wrapper}, and \hyperlink{classsha1wrapper_a8ab1d20a43a4768df03799a14cfbb6b6}{sha1wrapper}.\hypertarget{classhashwrapper_a7fe42ccf310e7d2cfe95f61732b73197}{
+\index{hashwrapper@{hashwrapper}!updateContext@{updateContext}}
+\index{updateContext@{updateContext}!hashwrapper@{hashwrapper}}
+\subsubsection[{updateContext}]{\setlength{\rightskip}{0pt plus 5cm}virtual void hashwrapper::updateContext (unsigned char $\ast$ {\em data}, \/  unsigned int {\em len})\hspace{0.3cm}{\ttfamily  \mbox{[}protected, pure virtual\mbox{]}}}}
+\label{classhashwrapper_a7fe42ccf310e7d2cfe95f61732b73197}
+
+
+This method adds the given data to the current hash context. This memberfunction is pure virtual and has to be implemented by the subclass
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em data}]The data to add to the current context \item[{\em len}]The length of the data to add \end{DoxyParams}
+
+
+Implemented in \hyperlink{classmd5wrapper_a6ab84182cd32d43f5fd05bfb68bbc133}{md5wrapper}, and \hyperlink{classsha1wrapper_af862f411a597be53682cbce6177e06e6}{sha1wrapper}.
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+G:/Course Work/Engineering/Engineering HWK/COEN 345/c345pV1.0.1/c345pV1.0.1/c345Project/c345Project/hashlib/\hyperlink{hl__hashwrapper_8h}{hl\_\-hashwrapper.h}\end{DoxyCompactItemize}

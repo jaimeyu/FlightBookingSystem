@@ -1,0 +1,78 @@
+\hypertarget{hl__sha1_8h}{
+\section{G:/Course Work/Engineering/Engineering HWK/COEN 345/c345pV1.0.1/c345pV1.0.1/c345Project/c345Project/hashlib/hl\_\-sha1.h File Reference}
+\label{hl__sha1_8h}\index{G:/Course Work/Engineering/Engineering HWK/COEN 345/c345pV1.0.1/c345pV1.0.1/c345Project/c345Project/hashlib/hl\_\-sha1.h@{G:/Course Work/Engineering/Engineering HWK/COEN 345/c345pV1.0.1/c345pV1.0.1/c345Project/c345Project/hashlib/hl\_\-sha1.h}}
+}
+
+
+This file contains the declaration of the \hyperlink{class_s_h_a1}{SHA1} class.  
+{\ttfamily \#include \char`\"{}hl\_\-types.h\char`\"{}}\par
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct_s_h_a1___c_t_x}{SHA1\_\-CTX}
+\begin{DoxyCompactList}\small\item\em this struct represents a SHA1-\/hash context. \item\end{DoxyCompactList}\item 
+class \hyperlink{class_s_h_a1}{SHA1}
+\begin{DoxyCompactList}\small\item\em This class represents the implementation of the sha1 algorithm. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{hl__sha1_8h_affb0e361992e82550da290d8dccc6c52}{SHA1HashSize}~20
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \{ \hyperlink{hl__sha1_8h_a06fc87d81c62e9abb8790b6e5713c55ba581d05c0e86b0ca3a00c6e24ea81b3fa}{shaSuccess} =  0, 
+\hyperlink{hl__sha1_8h_a06fc87d81c62e9abb8790b6e5713c55bae801efd0a808fb77467a5bdf8ad5ee70}{shaNull}, 
+\hyperlink{hl__sha1_8h_a06fc87d81c62e9abb8790b6e5713c55ba383493bb8927060f349e11f915cbb636}{shaInputTooLong}, 
+\hyperlink{hl__sha1_8h_a06fc87d81c62e9abb8790b6e5713c55baf95bed729cc00460585fb8d76f0c384d}{shaStateError}
+ \}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This file contains the declaration of the \hyperlink{class_s_h_a1}{SHA1} class. \begin{DoxyDate}{Date}
+Mo 17 Sep 2007 
+\end{DoxyDate}
+
+
+Definition in file \hyperlink{hl__sha1_8h_source}{hl\_\-sha1.h}.
+
+\subsection{Define Documentation}
+\hypertarget{hl__sha1_8h_affb0e361992e82550da290d8dccc6c52}{
+\index{hl\_\-sha1.h@{hl\_\-sha1.h}!SHA1HashSize@{SHA1HashSize}}
+\index{SHA1HashSize@{SHA1HashSize}!hl_sha1.h@{hl\_\-sha1.h}}
+\subsubsection[{SHA1HashSize}]{\setlength{\rightskip}{0pt plus 5cm}\#define SHA1HashSize~20}}
+\label{hl__sha1_8h_affb0e361992e82550da290d8dccc6c52}
+
+
+Definition at line 95 of file hl\_\-sha1.h.
+
+\subsection{Enumeration Type Documentation}
+\hypertarget{hl__sha1_8h_a06fc87d81c62e9abb8790b6e5713c55b}{
+\subsubsection[{"@0}]{\setlength{\rightskip}{0pt plus 5cm}anonymous enum}}
+\label{hl__sha1_8h_a06fc87d81c62e9abb8790b6e5713c55b}
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{shaSuccess@{shaSuccess}!hl\_\-sha1.h@{hl\_\-sha1.h}}\index{hl\_\-sha1.h@{hl\_\-sha1.h}!shaSuccess@{shaSuccess}}\item[{\em 
+\hypertarget{hl__sha1_8h_a06fc87d81c62e9abb8790b6e5713c55ba581d05c0e86b0ca3a00c6e24ea81b3fa}{
+shaSuccess}
+\label{hl__sha1_8h_a06fc87d81c62e9abb8790b6e5713c55ba581d05c0e86b0ca3a00c6e24ea81b3fa}
+}]\index{shaNull@{shaNull}!hl\_\-sha1.h@{hl\_\-sha1.h}}\index{hl\_\-sha1.h@{hl\_\-sha1.h}!shaNull@{shaNull}}\item[{\em 
+\hypertarget{hl__sha1_8h_a06fc87d81c62e9abb8790b6e5713c55bae801efd0a808fb77467a5bdf8ad5ee70}{
+shaNull}
+\label{hl__sha1_8h_a06fc87d81c62e9abb8790b6e5713c55bae801efd0a808fb77467a5bdf8ad5ee70}
+}]\index{shaInputTooLong@{shaInputTooLong}!hl\_\-sha1.h@{hl\_\-sha1.h}}\index{hl\_\-sha1.h@{hl\_\-sha1.h}!shaInputTooLong@{shaInputTooLong}}\item[{\em 
+\hypertarget{hl__sha1_8h_a06fc87d81c62e9abb8790b6e5713c55ba383493bb8927060f349e11f915cbb636}{
+shaInputTooLong}
+\label{hl__sha1_8h_a06fc87d81c62e9abb8790b6e5713c55ba383493bb8927060f349e11f915cbb636}
+}]\index{shaStateError@{shaStateError}!hl\_\-sha1.h@{hl\_\-sha1.h}}\index{hl\_\-sha1.h@{hl\_\-sha1.h}!shaStateError@{shaStateError}}\item[{\em 
+\hypertarget{hl__sha1_8h_a06fc87d81c62e9abb8790b6e5713c55baf95bed729cc00460585fb8d76f0c384d}{
+shaStateError}
+\label{hl__sha1_8h_a06fc87d81c62e9abb8790b6e5713c55baf95bed729cc00460585fb8d76f0c384d}
+}]\end{description}
+\end{Desc}
+
+
+
+Definition at line 84 of file hl\_\-sha1.h.

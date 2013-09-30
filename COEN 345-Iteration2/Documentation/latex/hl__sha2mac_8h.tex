@@ -1,0 +1,239 @@
+\hypertarget{hl__sha2mac_8h}{
+\section{G:/Course Work/Engineering/Engineering HWK/COEN 345/c345pV1.0.1/c345pV1.0.1/c345Project/c345Project/hashlib/hl\_\-sha2mac.h File Reference}
+\label{hl__sha2mac_8h}\index{G:/Course Work/Engineering/Engineering HWK/COEN 345/c345pV1.0.1/c345pV1.0.1/c345Project/c345Project/hashlib/hl\_\-sha2mac.h@{G:/Course Work/Engineering/Engineering HWK/COEN 345/c345pV1.0.1/c345pV1.0.1/c345Project/c345Project/hashlib/hl\_\-sha2mac.h}}
+}
+
+
+This file contains useful macros for use with SHA384 and SHA512.  
+\subsection*{Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{hl__sha2mac_8h_a8782a401fbf55261460863fc2f8df1ce}{LITTLE\_\-ENDIAN}~1234
+\item 
+\#define \hyperlink{hl__sha2mac_8h_a1771b7fb65ee640524d0052f229768c3}{BYTE\_\-ORDER}~LITTLE\_\-ENDIAN
+\item 
+\#define \hyperlink{hl__sha2mac_8h_a7164c79bb6bc80abcb61cb96eef4194e}{REVERSE32}(w, x)
+\item 
+\#define \hyperlink{hl__sha2mac_8h_a5399a7e8dab676a6c36fe85c91ae1366}{REVERSE64}(w, x)
+\item 
+\#define \hyperlink{hl__sha2mac_8h_a32ce6a800376f90c7cee70ac2e7255d6}{ADDINC128}(w, n)
+\item 
+\#define \hyperlink{hl__sha2mac_8h_a324569b417209f3e941991d642302d51}{SHA2\_\-USE\_\-MEMSET\_\-MEMCPY}~1
+\item 
+\#define \hyperlink{hl__sha2mac_8h_a8e212a8c6f84340a49f10895833e2f2d}{MEMSET\_\-BZERO}(p, l)~memset((p), 0, (l))
+\item 
+\#define \hyperlink{hl__sha2mac_8h_aa357cebb0a4ac20de95565894de5f793}{MEMCPY\_\-BCOPY}(d, s, l)~memcpy((d), (s), (l))
+\item 
+\#define \hyperlink{hl__sha2mac_8h_af299e0982ce71aad5027c4a7315e536f}{R}(b, x)~((x) $>$$>$ (b))
+\item 
+\#define \hyperlink{hl__sha2mac_8h_afe83c8790798dddd30665496143a853b}{S32}(b, x)~(((x) $>$$>$ (b)) $|$ ((x) $<$$<$ (32 -\/ (b))))
+\item 
+\#define \hyperlink{hl__sha2mac_8h_a04c57d7554181e15fe6063a477d28236}{S64}(b, x)~(((x) $>$$>$ (b)) $|$ ((x) $<$$<$ (64 -\/ (b))))
+\item 
+\#define \hyperlink{hl__sha2mac_8h_ab0a0d1ad13c7e4d3cb38c89f7127c85a}{Ch}(x, y, z)~(((x) \& (y)) $^\wedge$ (($\sim$(x)) \& (z)))
+\item 
+\#define \hyperlink{hl__sha2mac_8h_a447cd1d7fb703b62666400976be24bf3}{Maj}(x, y, z)~(((x) \& (y)) $^\wedge$ ((x) \& (z)) $^\wedge$ ((y) \& (z)))
+\item 
+\#define \hyperlink{hl__sha2mac_8h_a1d3b933bf48a1c763775d358313f44a6}{Sigma0\_\-256}(x)~(S32(2,  (x)) $^\wedge$ S32(13, (x)) $^\wedge$ S32(22, (x)))
+\item 
+\#define \hyperlink{hl__sha2mac_8h_a98f25dda8f234733acf0386d6d5187fd}{Sigma1\_\-256}(x)~(S32(6,  (x)) $^\wedge$ S32(11, (x)) $^\wedge$ S32(25, (x)))
+\item 
+\#define \hyperlink{hl__sha2mac_8h_afdc787683d72110451742acd5bf41d16}{sigma0\_\-256}(x)~(S32(7,  (x)) $^\wedge$ S32(18, (x)) $^\wedge$ R(3 ,   (x)))
+\item 
+\#define \hyperlink{hl__sha2mac_8h_a6daf5f3524cf68e6a2e19de772070e77}{sigma1\_\-256}(x)~(S32(17, (x)) $^\wedge$ S32(19, (x)) $^\wedge$ R(10,   (x)))
+\item 
+\#define \hyperlink{hl__sha2mac_8h_a07b4672fd77b0b5f2bf0041e2faf0b45}{Sigma0\_\-512}(x)~(S64(28, (x)) $^\wedge$ S64(34, (x)) $^\wedge$ S64(39, (x)))
+\item 
+\#define \hyperlink{hl__sha2mac_8h_a6a0406d09af6eaa6d933070801f74002}{Sigma1\_\-512}(x)~(S64(14, (x)) $^\wedge$ S64(18, (x)) $^\wedge$ S64(41, (x)))
+\item 
+\#define \hyperlink{hl__sha2mac_8h_a449da15ce26bdf3bf58925e17c7864b3}{sigma0\_\-512}(x)~(S64( 1, (x)) $^\wedge$ S64( 8, (x)) $^\wedge$ R( 7,   (x)))
+\item 
+\#define \hyperlink{hl__sha2mac_8h_adcf0e492a43c6f34a3a5023a0a448e2d}{sigma1\_\-512}(x)~(S64(19, (x)) $^\wedge$ S64(61, (x)) $^\wedge$ R( 6,   (x)))
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This file contains useful macros for use with SHA384 and SHA512. \begin{DoxyDate}{Date}
+Mo 12 Nov 2007 
+\end{DoxyDate}
+
+
+Definition in file \hyperlink{hl__sha2mac_8h_source}{hl\_\-sha2mac.h}.
+
+\subsection{Define Documentation}
+\hypertarget{hl__sha2mac_8h_a32ce6a800376f90c7cee70ac2e7255d6}{
+\index{hl\_\-sha2mac.h@{hl\_\-sha2mac.h}!ADDINC128@{ADDINC128}}
+\index{ADDINC128@{ADDINC128}!hl_sha2mac.h@{hl\_\-sha2mac.h}}
+\subsubsection[{ADDINC128}]{\setlength{\rightskip}{0pt plus 5cm}\#define ADDINC128(w, \/  n)}}
+\label{hl__sha2mac_8h_a32ce6a800376f90c7cee70ac2e7255d6}
+{\bfseries Value:}
+\begin{DoxyCode}
+{ \
+        (w)[0] += (sha2_word64)(n); \
+        if ((w)[0] < (n)) { \
+                (w)[1]++; \
+        } \
+}
+\end{DoxyCode}
+
+
+Definition at line 130 of file hl\_\-sha2mac.h.\hypertarget{hl__sha2mac_8h_a1771b7fb65ee640524d0052f229768c3}{
+\index{hl\_\-sha2mac.h@{hl\_\-sha2mac.h}!BYTE\_\-ORDER@{BYTE\_\-ORDER}}
+\index{BYTE\_\-ORDER@{BYTE\_\-ORDER}!hl_sha2mac.h@{hl\_\-sha2mac.h}}
+\subsubsection[{BYTE\_\-ORDER}]{\setlength{\rightskip}{0pt plus 5cm}\#define BYTE\_\-ORDER~LITTLE\_\-ENDIAN}}
+\label{hl__sha2mac_8h_a1771b7fb65ee640524d0052f229768c3}
+
+
+Definition at line 103 of file hl\_\-sha2mac.h.\hypertarget{hl__sha2mac_8h_ab0a0d1ad13c7e4d3cb38c89f7127c85a}{
+\index{hl\_\-sha2mac.h@{hl\_\-sha2mac.h}!Ch@{Ch}}
+\index{Ch@{Ch}!hl_sha2mac.h@{hl\_\-sha2mac.h}}
+\subsubsection[{Ch}]{\setlength{\rightskip}{0pt plus 5cm}\#define Ch(x, \/  y, \/  z)~(((x) \& (y)) $^\wedge$ (($\sim$(x)) \& (z)))}}
+\label{hl__sha2mac_8h_ab0a0d1ad13c7e4d3cb38c89f7127c85a}
+
+
+Definition at line 181 of file hl\_\-sha2mac.h.\hypertarget{hl__sha2mac_8h_a8782a401fbf55261460863fc2f8df1ce}{
+\index{hl\_\-sha2mac.h@{hl\_\-sha2mac.h}!LITTLE\_\-ENDIAN@{LITTLE\_\-ENDIAN}}
+\index{LITTLE\_\-ENDIAN@{LITTLE\_\-ENDIAN}!hl_sha2mac.h@{hl\_\-sha2mac.h}}
+\subsubsection[{LITTLE\_\-ENDIAN}]{\setlength{\rightskip}{0pt plus 5cm}\#define LITTLE\_\-ENDIAN~1234}}
+\label{hl__sha2mac_8h_a8782a401fbf55261460863fc2f8df1ce}
+
+
+Definition at line 102 of file hl\_\-sha2mac.h.\hypertarget{hl__sha2mac_8h_a447cd1d7fb703b62666400976be24bf3}{
+\index{hl\_\-sha2mac.h@{hl\_\-sha2mac.h}!Maj@{Maj}}
+\index{Maj@{Maj}!hl_sha2mac.h@{hl\_\-sha2mac.h}}
+\subsubsection[{Maj}]{\setlength{\rightskip}{0pt plus 5cm}\#define Maj(x, \/  y, \/  z)~(((x) \& (y)) $^\wedge$ ((x) \& (z)) $^\wedge$ ((y) \& (z)))}}
+\label{hl__sha2mac_8h_a447cd1d7fb703b62666400976be24bf3}
+
+
+Definition at line 182 of file hl\_\-sha2mac.h.\hypertarget{hl__sha2mac_8h_aa357cebb0a4ac20de95565894de5f793}{
+\index{hl\_\-sha2mac.h@{hl\_\-sha2mac.h}!MEMCPY\_\-BCOPY@{MEMCPY\_\-BCOPY}}
+\index{MEMCPY\_\-BCOPY@{MEMCPY\_\-BCOPY}!hl_sha2mac.h@{hl\_\-sha2mac.h}}
+\subsubsection[{MEMCPY\_\-BCOPY}]{\setlength{\rightskip}{0pt plus 5cm}\#define MEMCPY\_\-BCOPY(d, \/  s, \/  l)~memcpy((d), (s), (l))}}
+\label{hl__sha2mac_8h_aa357cebb0a4ac20de95565894de5f793}
+
+
+Definition at line 157 of file hl\_\-sha2mac.h.\hypertarget{hl__sha2mac_8h_a8e212a8c6f84340a49f10895833e2f2d}{
+\index{hl\_\-sha2mac.h@{hl\_\-sha2mac.h}!MEMSET\_\-BZERO@{MEMSET\_\-BZERO}}
+\index{MEMSET\_\-BZERO@{MEMSET\_\-BZERO}!hl_sha2mac.h@{hl\_\-sha2mac.h}}
+\subsubsection[{MEMSET\_\-BZERO}]{\setlength{\rightskip}{0pt plus 5cm}\#define MEMSET\_\-BZERO(p, \/  l)~memset((p), 0, (l))}}
+\label{hl__sha2mac_8h_a8e212a8c6f84340a49f10895833e2f2d}
+
+
+Definition at line 156 of file hl\_\-sha2mac.h.\hypertarget{hl__sha2mac_8h_af299e0982ce71aad5027c4a7315e536f}{
+\index{hl\_\-sha2mac.h@{hl\_\-sha2mac.h}!R@{R}}
+\index{R@{R}!hl_sha2mac.h@{hl\_\-sha2mac.h}}
+\subsubsection[{R}]{\setlength{\rightskip}{0pt plus 5cm}\#define R(b, \/  x)~((x) $>$$>$ (b))}}
+\label{hl__sha2mac_8h_af299e0982ce71aad5027c4a7315e536f}
+
+
+Definition at line 174 of file hl\_\-sha2mac.h.\hypertarget{hl__sha2mac_8h_a7164c79bb6bc80abcb61cb96eef4194e}{
+\index{hl\_\-sha2mac.h@{hl\_\-sha2mac.h}!REVERSE32@{REVERSE32}}
+\index{REVERSE32@{REVERSE32}!hl_sha2mac.h@{hl\_\-sha2mac.h}}
+\subsubsection[{REVERSE32}]{\setlength{\rightskip}{0pt plus 5cm}\#define REVERSE32(w, \/  x)}}
+\label{hl__sha2mac_8h_a7164c79bb6bc80abcb61cb96eef4194e}
+{\bfseries Value:}
+\begin{DoxyCode}
+{ \
+        sha2_word32 tmp = (w); \
+        tmp = (tmp >> 16) | (tmp << 16); \
+        (x) = ((tmp & 0xff00ff00UL) >> 8) | ((tmp & 0x00ff00ffUL) << 8); \
+}
+\end{DoxyCode}
+
+
+Definition at line 110 of file hl\_\-sha2mac.h.\hypertarget{hl__sha2mac_8h_a5399a7e8dab676a6c36fe85c91ae1366}{
+\index{hl\_\-sha2mac.h@{hl\_\-sha2mac.h}!REVERSE64@{REVERSE64}}
+\index{REVERSE64@{REVERSE64}!hl_sha2mac.h@{hl\_\-sha2mac.h}}
+\subsubsection[{REVERSE64}]{\setlength{\rightskip}{0pt plus 5cm}\#define REVERSE64(w, \/  x)}}
+\label{hl__sha2mac_8h_a5399a7e8dab676a6c36fe85c91ae1366}
+{\bfseries Value:}
+\begin{DoxyCode}
+{ \
+        sha2_word64 tmp = (w); \
+        tmp = (tmp >> 32) | (tmp << 32); \
+        tmp = ((tmp & 0xff00ff00ff00ff00ULL) >> 8) | \
+        ((tmp & 0x00ff00ff00ff00ffULL) << 8); \
+        (x) = ((tmp & 0xffff0000ffff0000ULL) >> 16) | \
+        ((tmp & 0x0000ffff0000ffffULL) << 16); \
+}
+\end{DoxyCode}
+
+
+Definition at line 115 of file hl\_\-sha2mac.h.\hypertarget{hl__sha2mac_8h_afe83c8790798dddd30665496143a853b}{
+\index{hl\_\-sha2mac.h@{hl\_\-sha2mac.h}!S32@{S32}}
+\index{S32@{S32}!hl_sha2mac.h@{hl\_\-sha2mac.h}}
+\subsubsection[{S32}]{\setlength{\rightskip}{0pt plus 5cm}\#define S32(b, \/  x)~(((x) $>$$>$ (b)) $|$ ((x) $<$$<$ (32 -\/ (b))))}}
+\label{hl__sha2mac_8h_afe83c8790798dddd30665496143a853b}
+
+
+Definition at line 176 of file hl\_\-sha2mac.h.\hypertarget{hl__sha2mac_8h_a04c57d7554181e15fe6063a477d28236}{
+\index{hl\_\-sha2mac.h@{hl\_\-sha2mac.h}!S64@{S64}}
+\index{S64@{S64}!hl_sha2mac.h@{hl\_\-sha2mac.h}}
+\subsubsection[{S64}]{\setlength{\rightskip}{0pt plus 5cm}\#define S64(b, \/  x)~(((x) $>$$>$ (b)) $|$ ((x) $<$$<$ (64 -\/ (b))))}}
+\label{hl__sha2mac_8h_a04c57d7554181e15fe6063a477d28236}
+
+
+Definition at line 178 of file hl\_\-sha2mac.h.\hypertarget{hl__sha2mac_8h_a324569b417209f3e941991d642302d51}{
+\index{hl\_\-sha2mac.h@{hl\_\-sha2mac.h}!SHA2\_\-USE\_\-MEMSET\_\-MEMCPY@{SHA2\_\-USE\_\-MEMSET\_\-MEMCPY}}
+\index{SHA2\_\-USE\_\-MEMSET\_\-MEMCPY@{SHA2\_\-USE\_\-MEMSET\_\-MEMCPY}!hl_sha2mac.h@{hl\_\-sha2mac.h}}
+\subsubsection[{SHA2\_\-USE\_\-MEMSET\_\-MEMCPY}]{\setlength{\rightskip}{0pt plus 5cm}\#define SHA2\_\-USE\_\-MEMSET\_\-MEMCPY~1}}
+\label{hl__sha2mac_8h_a324569b417209f3e941991d642302d51}
+
+
+Definition at line 148 of file hl\_\-sha2mac.h.\hypertarget{hl__sha2mac_8h_afdc787683d72110451742acd5bf41d16}{
+\index{hl\_\-sha2mac.h@{hl\_\-sha2mac.h}!sigma0\_\-256@{sigma0\_\-256}}
+\index{sigma0\_\-256@{sigma0\_\-256}!hl_sha2mac.h@{hl\_\-sha2mac.h}}
+\subsubsection[{sigma0\_\-256}]{\setlength{\rightskip}{0pt plus 5cm}\#define sigma0\_\-256(x)~(S32(7,  (x)) $^\wedge$ S32(18, (x)) $^\wedge$ R(3 ,   (x)))}}
+\label{hl__sha2mac_8h_afdc787683d72110451742acd5bf41d16}
+
+
+Definition at line 187 of file hl\_\-sha2mac.h.\hypertarget{hl__sha2mac_8h_a1d3b933bf48a1c763775d358313f44a6}{
+\index{hl\_\-sha2mac.h@{hl\_\-sha2mac.h}!Sigma0\_\-256@{Sigma0\_\-256}}
+\index{Sigma0\_\-256@{Sigma0\_\-256}!hl_sha2mac.h@{hl\_\-sha2mac.h}}
+\subsubsection[{Sigma0\_\-256}]{\setlength{\rightskip}{0pt plus 5cm}\#define Sigma0\_\-256(x)~(S32(2,  (x)) $^\wedge$ S32(13, (x)) $^\wedge$ S32(22, (x)))}}
+\label{hl__sha2mac_8h_a1d3b933bf48a1c763775d358313f44a6}
+
+
+Definition at line 185 of file hl\_\-sha2mac.h.\hypertarget{hl__sha2mac_8h_a449da15ce26bdf3bf58925e17c7864b3}{
+\index{hl\_\-sha2mac.h@{hl\_\-sha2mac.h}!sigma0\_\-512@{sigma0\_\-512}}
+\index{sigma0\_\-512@{sigma0\_\-512}!hl_sha2mac.h@{hl\_\-sha2mac.h}}
+\subsubsection[{sigma0\_\-512}]{\setlength{\rightskip}{0pt plus 5cm}\#define sigma0\_\-512(x)~(S64( 1, (x)) $^\wedge$ S64( 8, (x)) $^\wedge$ R( 7,   (x)))}}
+\label{hl__sha2mac_8h_a449da15ce26bdf3bf58925e17c7864b3}
+
+
+Definition at line 193 of file hl\_\-sha2mac.h.\hypertarget{hl__sha2mac_8h_a07b4672fd77b0b5f2bf0041e2faf0b45}{
+\index{hl\_\-sha2mac.h@{hl\_\-sha2mac.h}!Sigma0\_\-512@{Sigma0\_\-512}}
+\index{Sigma0\_\-512@{Sigma0\_\-512}!hl_sha2mac.h@{hl\_\-sha2mac.h}}
+\subsubsection[{Sigma0\_\-512}]{\setlength{\rightskip}{0pt plus 5cm}\#define Sigma0\_\-512(x)~(S64(28, (x)) $^\wedge$ S64(34, (x)) $^\wedge$ S64(39, (x)))}}
+\label{hl__sha2mac_8h_a07b4672fd77b0b5f2bf0041e2faf0b45}
+
+
+Definition at line 191 of file hl\_\-sha2mac.h.\hypertarget{hl__sha2mac_8h_a6daf5f3524cf68e6a2e19de772070e77}{
+\index{hl\_\-sha2mac.h@{hl\_\-sha2mac.h}!sigma1\_\-256@{sigma1\_\-256}}
+\index{sigma1\_\-256@{sigma1\_\-256}!hl_sha2mac.h@{hl\_\-sha2mac.h}}
+\subsubsection[{sigma1\_\-256}]{\setlength{\rightskip}{0pt plus 5cm}\#define sigma1\_\-256(x)~(S32(17, (x)) $^\wedge$ S32(19, (x)) $^\wedge$ R(10,   (x)))}}
+\label{hl__sha2mac_8h_a6daf5f3524cf68e6a2e19de772070e77}
+
+
+Definition at line 188 of file hl\_\-sha2mac.h.\hypertarget{hl__sha2mac_8h_a98f25dda8f234733acf0386d6d5187fd}{
+\index{hl\_\-sha2mac.h@{hl\_\-sha2mac.h}!Sigma1\_\-256@{Sigma1\_\-256}}
+\index{Sigma1\_\-256@{Sigma1\_\-256}!hl_sha2mac.h@{hl\_\-sha2mac.h}}
+\subsubsection[{Sigma1\_\-256}]{\setlength{\rightskip}{0pt plus 5cm}\#define Sigma1\_\-256(x)~(S32(6,  (x)) $^\wedge$ S32(11, (x)) $^\wedge$ S32(25, (x)))}}
+\label{hl__sha2mac_8h_a98f25dda8f234733acf0386d6d5187fd}
+
+
+Definition at line 186 of file hl\_\-sha2mac.h.\hypertarget{hl__sha2mac_8h_adcf0e492a43c6f34a3a5023a0a448e2d}{
+\index{hl\_\-sha2mac.h@{hl\_\-sha2mac.h}!sigma1\_\-512@{sigma1\_\-512}}
+\index{sigma1\_\-512@{sigma1\_\-512}!hl_sha2mac.h@{hl\_\-sha2mac.h}}
+\subsubsection[{sigma1\_\-512}]{\setlength{\rightskip}{0pt plus 5cm}\#define sigma1\_\-512(x)~(S64(19, (x)) $^\wedge$ S64(61, (x)) $^\wedge$ R( 6,   (x)))}}
+\label{hl__sha2mac_8h_adcf0e492a43c6f34a3a5023a0a448e2d}
+
+
+Definition at line 194 of file hl\_\-sha2mac.h.\hypertarget{hl__sha2mac_8h_a6a0406d09af6eaa6d933070801f74002}{
+\index{hl\_\-sha2mac.h@{hl\_\-sha2mac.h}!Sigma1\_\-512@{Sigma1\_\-512}}
+\index{Sigma1\_\-512@{Sigma1\_\-512}!hl_sha2mac.h@{hl\_\-sha2mac.h}}
+\subsubsection[{Sigma1\_\-512}]{\setlength{\rightskip}{0pt plus 5cm}\#define Sigma1\_\-512(x)~(S64(14, (x)) $^\wedge$ S64(18, (x)) $^\wedge$ S64(41, (x)))}}
+\label{hl__sha2mac_8h_a6a0406d09af6eaa6d933070801f74002}
+
+
+Definition at line 192 of file hl\_\-sha2mac.h.

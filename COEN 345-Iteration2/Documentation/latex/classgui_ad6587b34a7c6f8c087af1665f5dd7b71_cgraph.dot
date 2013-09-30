@@ -1,0 +1,41 @@
+digraph G
+{
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  rankdir=LR;
+  Node1 [label="gui::optionU",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="gui::isInputDigit",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classgui.html#a57cb6f9802b7fa6a73fb43e71c4e84af"];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="gui::OperationManagers",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classgui.html#afe37700bacd80503661c4f45b55019bd",tooltip="this asks the manager what he wants to do."];
+  Node3 -> Node4 [color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="gui::Menu",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classgui.html#a57cd3dc1eca1d8cb7aabb9fa75d79702",tooltip="the main menu. asks what the user would like to do."];
+  Node4 -> Node5 [color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="fileops::hashCheck",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classfileops.html#a978fbcad1782aae513c2690bd43985c3",tooltip="constructor"];
+  Node4 -> Node6 [color="midnightblue",fontsize="10",style="solid"];
+  Node6 [label="fileops::ReadFromFile",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classfileops.html#ae29d933450817ab66cd743382ce65226"];
+  Node4 -> Node7 [color="midnightblue",fontsize="10",style="solid"];
+  Node7 [label="gui::showAllFlights",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classgui.html#a5c6627bafacf8ced6dde1abc32e8dea8",tooltip="shows the master list of flights/schedules."];
+  Node7 -> Node4 [color="midnightblue",fontsize="10",style="solid"];
+  Node4 -> Node8 [color="midnightblue",fontsize="10",style="solid"];
+  Node8 [label="gui::User",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classgui.html#a3c2584790da727b2c2fabc178c449ea3",tooltip="asks what kind of user are you."];
+  Node8 -> Node9 [color="midnightblue",fontsize="10",style="solid"];
+  Node9 [label="gui::AirlineAgents",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classgui.html#ae39757d1c6bdbfa938dbe3226a36febb",tooltip="agent function. NOT IMPLEMENTED"];
+  Node8 -> Node4 [color="midnightblue",fontsize="10",style="solid"];
+  Node8 -> Node3 [color="midnightblue",fontsize="10",style="solid"];
+  Node4 -> Node10 [color="midnightblue",fontsize="10",style="solid"];
+  Node10 [label="fileops::writeToFile",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classfileops.html#a19786cd653a381ba6b185cfbab4efb0a"];
+  Node3 -> Node11 [color="midnightblue",fontsize="10",style="solid"];
+  Node11 [label="gui::optionD",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classgui.html#a0534e0904bd2e2e3694e3da5396d1339",tooltip="shows the master list of flights/schedules. Was original a different function."];
+  Node11 -> Node4 [color="midnightblue",fontsize="10",style="solid"];
+  Node11 -> Node7 [color="midnightblue",fontsize="10",style="solid"];
+  Node3 -> Node12 [color="midnightblue",fontsize="10",style="solid"];
+  Node12 [label="gui::optionS",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classgui.html#afa7a5fc9b6f835a69a0c8433711fad57",tooltip="function to create flight/schedule"];
+  Node12 -> Node13 [color="midnightblue",fontsize="10",style="solid"];
+  Node13 [label="gui::checkFlightNumber",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classgui.html#a68a8c8fdbcf6ca93ea3d1233443b185c"];
+  Node13 -> Node14 [color="midnightblue",fontsize="10",style="solid"];
+  Node14 [label="gui::checkDuplicate",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classgui.html#a56286e7605a615ea09443ea66f3eca58",tooltip="constructor"];
+  Node12 -> Node2 [color="midnightblue",fontsize="10",style="solid"];
+  Node12 -> Node3 [color="midnightblue",fontsize="10",style="solid"];
+  Node3 -> Node1 [color="midnightblue",fontsize="10",style="solid"];
+}

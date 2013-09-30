@@ -1,0 +1,102 @@
+\hypertarget{class_s_h_a2ext}{
+\section{SHA2ext Class Reference}
+\label{class_s_h_a2ext}\index{SHA2ext@{SHA2ext}}
+}
+
+
+This class represents the implementation of the SHA384 and SHA512 algorithm.  
+
+
+{\ttfamily \#include $<$hl\_\-sha2ext.h$>$}\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_s_h_a2ext_a9d1e59ec49bf28e9ce1b059e0d34492b}{SHA384\_\-Init} (\hyperlink{struct_s_h_a512___c_t_x}{SHA384\_\-CTX} $\ast$context)
+\begin{DoxyCompactList}\small\item\em Initialize the SHA384 context. \item\end{DoxyCompactList}\item 
+void \hyperlink{class_s_h_a2ext_aedf1c75293856456cbdba6c5aca62fdd}{SHA512\_\-Init} (\hyperlink{struct_s_h_a512___c_t_x}{SHA512\_\-CTX} $\ast$context)
+\begin{DoxyCompactList}\small\item\em Initialize the SHA512 context. \item\end{DoxyCompactList}\item 
+void \hyperlink{class_s_h_a2ext_a910da8d255cde7a69d0149c7ad15fce3}{SHA384\_\-Update} (\hyperlink{struct_s_h_a512___c_t_x}{SHA384\_\-CTX} $\ast$context, const \hyperlink{hl__types_8h_adc1917ae5f0dc40725be12536ffe0a6c}{hl\_\-uint8} $\ast$data, unsigned int len)
+\begin{DoxyCompactList}\small\item\em Updates the SHA512 context. \item\end{DoxyCompactList}\item 
+void \hyperlink{class_s_h_a2ext_a11dbee3c0b8423d99d1b6a2ab82578b8}{SHA512\_\-Update} (\hyperlink{struct_s_h_a512___c_t_x}{SHA512\_\-CTX} $\ast$context, const \hyperlink{hl__types_8h_adc1917ae5f0dc40725be12536ffe0a6c}{hl\_\-uint8} $\ast$data, unsigned int len)
+\begin{DoxyCompactList}\small\item\em Updates the SHA284 context. \item\end{DoxyCompactList}\item 
+char $\ast$ \hyperlink{class_s_h_a2ext_a5e99e4b8c5327799cef436e5e187423b}{SHA384\_\-End} (\hyperlink{struct_s_h_a512___c_t_x}{SHA384\_\-CTX} $\ast$context, char buffer\mbox{[}SHA384\_\-DIGEST\_\-STRING\_\-LENGTH\mbox{]})
+\begin{DoxyCompactList}\small\item\em Ends the SHA384 operation and return the created hash in the given buffer. \item\end{DoxyCompactList}\item 
+char $\ast$ \hyperlink{class_s_h_a2ext_aa1d46fec9075d0b36397aa010b4329fb}{SHA512\_\-End} (\hyperlink{struct_s_h_a512___c_t_x}{SHA512\_\-CTX} $\ast$context, char buffer\mbox{[}SHA512\_\-DIGEST\_\-STRING\_\-LENGTH\mbox{]})
+\begin{DoxyCompactList}\small\item\em Ends the SHA512 operation and return the created hash in the given buffer. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This class represents the implementation of the SHA384 and SHA512 algorithm. Basically the class provides six public member-\/functions to create a hash: \hyperlink{class_s_h_a2ext_a9d1e59ec49bf28e9ce1b059e0d34492b}{SHA384\_\-Init()}, \hyperlink{class_s_h_a2ext_a910da8d255cde7a69d0149c7ad15fce3}{SHA384\_\-Update()}, \hyperlink{class_s_h_a2ext_a5e99e4b8c5327799cef436e5e187423b}{SHA384\_\-End()}, \hyperlink{class_s_h_a2ext_aedf1c75293856456cbdba6c5aca62fdd}{SHA512\_\-Init()}, \hyperlink{class_s_h_a2ext_a11dbee3c0b8423d99d1b6a2ab82578b8}{SHA512\_\-Update()} and \hyperlink{class_s_h_a2ext_aa1d46fec9075d0b36397aa010b4329fb}{SHA512\_\-End()}. If you want to create a hash based on a string or file quickly you should use the \hyperlink{classsha384wrapper}{sha384wrapper} or \hyperlink{classsha512wrapper}{sha512wrapper} classes. 
+
+Definition at line 136 of file hl\_\-sha2ext.h.
+
+\subsection{Member Function Documentation}
+\hypertarget{class_s_h_a2ext_a5e99e4b8c5327799cef436e5e187423b}{
+\index{SHA2ext@{SHA2ext}!SHA384\_\-End@{SHA384\_\-End}}
+\index{SHA384\_\-End@{SHA384\_\-End}!SHA2ext@{SHA2ext}}
+\subsubsection[{SHA384\_\-End}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ SHA2ext::SHA384\_\-End ({\bf SHA384\_\-CTX} $\ast$ {\em context}, \/  char {\em buffer}\mbox{[}SHA384\_\-DIGEST\_\-STRING\_\-LENGTH\mbox{]})}}
+\label{class_s_h_a2ext_a5e99e4b8c5327799cef436e5e187423b}
+
+
+Ends the SHA384 operation and return the created hash in the given buffer. 
+\begin{DoxyParams}{Parameters}
+\item[{\em context}]The context to end. \item[{\em buffer}]This OUT-\/Parameter contains the created hash after ending the operation. \end{DoxyParams}
+\hypertarget{class_s_h_a2ext_a9d1e59ec49bf28e9ce1b059e0d34492b}{
+\index{SHA2ext@{SHA2ext}!SHA384\_\-Init@{SHA384\_\-Init}}
+\index{SHA384\_\-Init@{SHA384\_\-Init}!SHA2ext@{SHA2ext}}
+\subsubsection[{SHA384\_\-Init}]{\setlength{\rightskip}{0pt plus 5cm}void SHA2ext::SHA384\_\-Init ({\bf SHA384\_\-CTX} $\ast$ {\em context})}}
+\label{class_s_h_a2ext_a9d1e59ec49bf28e9ce1b059e0d34492b}
+
+
+Initialize the SHA384 context. 
+\begin{DoxyParams}{Parameters}
+\item[{\em context}]The context to init. \end{DoxyParams}
+
+
+Definition at line 495 of file hl\_\-sha2ext.cpp.\hypertarget{class_s_h_a2ext_a910da8d255cde7a69d0149c7ad15fce3}{
+\index{SHA2ext@{SHA2ext}!SHA384\_\-Update@{SHA384\_\-Update}}
+\index{SHA384\_\-Update@{SHA384\_\-Update}!SHA2ext@{SHA2ext}}
+\subsubsection[{SHA384\_\-Update}]{\setlength{\rightskip}{0pt plus 5cm}void SHA2ext::SHA384\_\-Update ({\bf SHA384\_\-CTX} $\ast$ {\em context}, \/  const {\bf hl\_\-uint8} $\ast$ {\em data}, \/  unsigned int {\em len})}}
+\label{class_s_h_a2ext_a910da8d255cde7a69d0149c7ad15fce3}
+
+
+Updates the SHA512 context. 
+\begin{DoxyParams}{Parameters}
+\item[{\em context}]The context to update. \item[{\em data}]The data for updating the context. \item[{\em len}]The length of the given data. \end{DoxyParams}
+\hypertarget{class_s_h_a2ext_aa1d46fec9075d0b36397aa010b4329fb}{
+\index{SHA2ext@{SHA2ext}!SHA512\_\-End@{SHA512\_\-End}}
+\index{SHA512\_\-End@{SHA512\_\-End}!SHA2ext@{SHA2ext}}
+\subsubsection[{SHA512\_\-End}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ SHA2ext::SHA512\_\-End ({\bf SHA512\_\-CTX} $\ast$ {\em context}, \/  char {\em buffer}\mbox{[}SHA512\_\-DIGEST\_\-STRING\_\-LENGTH\mbox{]})}}
+\label{class_s_h_a2ext_aa1d46fec9075d0b36397aa010b4329fb}
+
+
+Ends the SHA512 operation and return the created hash in the given buffer. 
+\begin{DoxyParams}{Parameters}
+\item[{\em context}]The context to end. \item[{\em buffer}]This OUT-\/Parameter contains the created hash after ending the operation. \end{DoxyParams}
+\hypertarget{class_s_h_a2ext_aedf1c75293856456cbdba6c5aca62fdd}{
+\index{SHA2ext@{SHA2ext}!SHA512\_\-Init@{SHA512\_\-Init}}
+\index{SHA512\_\-Init@{SHA512\_\-Init}!SHA2ext@{SHA2ext}}
+\subsubsection[{SHA512\_\-Init}]{\setlength{\rightskip}{0pt plus 5cm}void SHA2ext::SHA512\_\-Init ({\bf SHA512\_\-CTX} $\ast$ {\em context})}}
+\label{class_s_h_a2ext_aedf1c75293856456cbdba6c5aca62fdd}
+
+
+Initialize the SHA512 context. 
+\begin{DoxyParams}{Parameters}
+\item[{\em context}]The context to init. \end{DoxyParams}
+
+
+Definition at line 163 of file hl\_\-sha2ext.cpp.\hypertarget{class_s_h_a2ext_a11dbee3c0b8423d99d1b6a2ab82578b8}{
+\index{SHA2ext@{SHA2ext}!SHA512\_\-Update@{SHA512\_\-Update}}
+\index{SHA512\_\-Update@{SHA512\_\-Update}!SHA2ext@{SHA2ext}}
+\subsubsection[{SHA512\_\-Update}]{\setlength{\rightskip}{0pt plus 5cm}void SHA2ext::SHA512\_\-Update ({\bf SHA512\_\-CTX} $\ast$ {\em context}, \/  const {\bf hl\_\-uint8} $\ast$ {\em data}, \/  unsigned int {\em len})}}
+\label{class_s_h_a2ext_a11dbee3c0b8423d99d1b6a2ab82578b8}
+
+
+Updates the SHA284 context. 
+\begin{DoxyParams}{Parameters}
+\item[{\em context}]The context to update. \item[{\em data}]The data for updating the context. \item[{\em len}]The length of the given data. \end{DoxyParams}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+G:/Course Work/Engineering/Engineering HWK/COEN 345/c345pV1.0.1/c345pV1.0.1/c345Project/c345Project/hashlib/\hyperlink{hl__sha2ext_8h}{hl\_\-sha2ext.h}\item 
+G:/Course Work/Engineering/Engineering HWK/COEN 345/c345pV1.0.1/c345pV1.0.1/c345Project/c345Project/hashlib/\hyperlink{hl__sha2ext_8cpp}{hl\_\-sha2ext.cpp}\end{DoxyCompactItemize}

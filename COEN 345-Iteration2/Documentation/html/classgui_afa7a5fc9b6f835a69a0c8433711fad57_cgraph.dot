@@ -1,0 +1,41 @@
+digraph G
+{
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  rankdir=LR;
+  Node1 [label="gui::optionS",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node2 [label="gui::checkFlightNumber",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classgui.html#a68a8c8fdbcf6ca93ea3d1233443b185c"];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node3 [label="gui::checkDuplicate",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classgui.html#a56286e7605a615ea09443ea66f3eca58",tooltip="constructor"];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node4 [label="gui::isInputDigit",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classgui.html#a57cb6f9802b7fa6a73fb43e71c4e84af"];
+  Node1 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node5 [label="gui::OperationManagers",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classgui.html#afe37700bacd80503661c4f45b55019bd",tooltip="this asks the manager what he wants to do."];
+  Node5 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node6 [label="gui::Menu",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classgui.html#a57cd3dc1eca1d8cb7aabb9fa75d79702",tooltip="the main menu. asks what the user would like to do."];
+  Node6 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node7 [label="fileops::hashCheck",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classfileops.html#a978fbcad1782aae513c2690bd43985c3",tooltip="constructor"];
+  Node6 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node8 [label="fileops::ReadFromFile",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classfileops.html#ae29d933450817ab66cd743382ce65226"];
+  Node6 -> Node9 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node9 [label="gui::showAllFlights",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classgui.html#a5c6627bafacf8ced6dde1abc32e8dea8",tooltip="shows the master list of flights/schedules."];
+  Node9 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node6 -> Node10 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node10 [label="gui::User",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classgui.html#a3c2584790da727b2c2fabc178c449ea3",tooltip="asks what kind of user are you."];
+  Node10 -> Node11 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node11 [label="gui::AirlineAgents",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classgui.html#ae39757d1c6bdbfa938dbe3226a36febb",tooltip="agent function. NOT IMPLEMENTED"];
+  Node10 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node10 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node6 -> Node12 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node12 [label="fileops::writeToFile",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classfileops.html#a19786cd653a381ba6b185cfbab4efb0a"];
+  Node5 -> Node13 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node13 [label="gui::optionD",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classgui.html#a0534e0904bd2e2e3694e3da5396d1339",tooltip="shows the master list of flights/schedules. Was original a different function."];
+  Node13 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node13 -> Node9 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node5 -> Node1 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node5 -> Node14 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node14 [label="gui::optionU",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classgui.html#ad6587b34a7c6f8c087af1665f5dd7b71",tooltip="!needs to be error checked"];
+  Node14 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node14 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+}

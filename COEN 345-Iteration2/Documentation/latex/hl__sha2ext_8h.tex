@@ -1,0 +1,137 @@
+\hypertarget{hl__sha2ext_8h}{
+\section{G:/Course Work/Engineering/Engineering HWK/COEN 345/c345pV1.0.1/c345pV1.0.1/c345Project/c345Project/hashlib/hl\_\-sha2ext.h File Reference}
+\label{hl__sha2ext_8h}\index{G:/Course Work/Engineering/Engineering HWK/COEN 345/c345pV1.0.1/c345pV1.0.1/c345Project/c345Project/hashlib/hl\_\-sha2ext.h@{G:/Course Work/Engineering/Engineering HWK/COEN 345/c345pV1.0.1/c345pV1.0.1/c345Project/c345Project/hashlib/hl\_\-sha2ext.h}}
+}
+
+
+This file contains the declaration of the SHA384 and SHA512 classes.  
+{\ttfamily \#include \char`\"{}hl\_\-types.h\char`\"{}}\par
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct_s_h_a512___c_t_x}{SHA512\_\-CTX}
+\begin{DoxyCompactList}\small\item\em This struct represents a SHA512-\/hash context. \item\end{DoxyCompactList}\item 
+class \hyperlink{class_s_h_a2ext}{SHA2ext}
+\begin{DoxyCompactList}\small\item\em This class represents the implementation of the SHA384 and SHA512 algorithm. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{hl__sha2ext_8h_a68d1fbbb5c00350da3e44c495607273e}{SHA384\_\-BLOCK\_\-LENGTH}~128
+\item 
+\#define \hyperlink{hl__sha2ext_8h_a5f90d25a54e963a3ae3d800fffddaa31}{SHA384\_\-DIGEST\_\-LENGTH}~48
+\item 
+\#define \hyperlink{hl__sha2ext_8h_a5e0cfb23f0ec75951994c93963b98f46}{SHA384\_\-DIGEST\_\-STRING\_\-LENGTH}~(SHA384\_\-DIGEST\_\-LENGTH $\ast$ 2 + 1)
+\item 
+\#define \hyperlink{hl__sha2ext_8h_a768752124501032a219d4426b2ce3197}{SHA512\_\-BLOCK\_\-LENGTH}~128
+\item 
+\#define \hyperlink{hl__sha2ext_8h_a5a8416d0f8e1af6d7525114ef09be118}{SHA512\_\-DIGEST\_\-LENGTH}~64
+\item 
+\#define \hyperlink{hl__sha2ext_8h_a8c2f6b671b4f82d98f8f4fe856105f8a}{SHA512\_\-DIGEST\_\-STRING\_\-LENGTH}~(SHA512\_\-DIGEST\_\-LENGTH $\ast$ 2 + 1)
+\item 
+\#define \hyperlink{hl__sha2ext_8h_aac3e549038e7ebd7af5a7e7385b93344}{SHA512\_\-SHORT\_\-BLOCK\_\-LENGTH}~(SHA512\_\-BLOCK\_\-LENGTH -\/ 16)
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef \hyperlink{hl__types_8h_adc1917ae5f0dc40725be12536ffe0a6c}{hl\_\-uint8} \hyperlink{hl__sha2ext_8h_ada1fe7a264f43a5b97091398ad760dd9}{sha2\_\-byte}
+\item 
+typedef \hyperlink{hl__types_8h_ae2fe08a06e4f429c5519ec9865f304d6}{hl\_\-uint32} \hyperlink{hl__sha2ext_8h_ac8a04e5c95648dec01f56e8a79e95187}{sha2\_\-word32}
+\item 
+typedef \hyperlink{hl__types_8h_acab20cc881134266c8bb4c3d27e1c906}{hl\_\-uint64} \hyperlink{hl__sha2ext_8h_aafcb9a8349a9a0c6f91950807b2f0d0d}{sha2\_\-word64}
+\item 
+typedef \hyperlink{struct_s_h_a512___c_t_x}{SHA512\_\-CTX} \hyperlink{hl__sha2ext_8h_aa5ada4d74bf5109a2ae863d156373bce}{SHA384\_\-CTX}
+\begin{DoxyCompactList}\small\item\em This struct represents a SHA384-\/hash context. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This file contains the declaration of the SHA384 and SHA512 classes. \begin{DoxyDate}{Date}
+Mo 12 Nov 2007 
+\end{DoxyDate}
+
+
+Definition in file \hyperlink{hl__sha2ext_8h_source}{hl\_\-sha2ext.h}.
+
+\subsection{Define Documentation}
+\hypertarget{hl__sha2ext_8h_a68d1fbbb5c00350da3e44c495607273e}{
+\index{hl\_\-sha2ext.h@{hl\_\-sha2ext.h}!SHA384\_\-BLOCK\_\-LENGTH@{SHA384\_\-BLOCK\_\-LENGTH}}
+\index{SHA384\_\-BLOCK\_\-LENGTH@{SHA384\_\-BLOCK\_\-LENGTH}!hl_sha2ext.h@{hl\_\-sha2ext.h}}
+\subsubsection[{SHA384\_\-BLOCK\_\-LENGTH}]{\setlength{\rightskip}{0pt plus 5cm}\#define SHA384\_\-BLOCK\_\-LENGTH~128}}
+\label{hl__sha2ext_8h_a68d1fbbb5c00350da3e44c495607273e}
+
+
+Definition at line 78 of file hl\_\-sha2ext.h.\hypertarget{hl__sha2ext_8h_a5f90d25a54e963a3ae3d800fffddaa31}{
+\index{hl\_\-sha2ext.h@{hl\_\-sha2ext.h}!SHA384\_\-DIGEST\_\-LENGTH@{SHA384\_\-DIGEST\_\-LENGTH}}
+\index{SHA384\_\-DIGEST\_\-LENGTH@{SHA384\_\-DIGEST\_\-LENGTH}!hl_sha2ext.h@{hl\_\-sha2ext.h}}
+\subsubsection[{SHA384\_\-DIGEST\_\-LENGTH}]{\setlength{\rightskip}{0pt plus 5cm}\#define SHA384\_\-DIGEST\_\-LENGTH~48}}
+\label{hl__sha2ext_8h_a5f90d25a54e963a3ae3d800fffddaa31}
+
+
+Definition at line 79 of file hl\_\-sha2ext.h.\hypertarget{hl__sha2ext_8h_a5e0cfb23f0ec75951994c93963b98f46}{
+\index{hl\_\-sha2ext.h@{hl\_\-sha2ext.h}!SHA384\_\-DIGEST\_\-STRING\_\-LENGTH@{SHA384\_\-DIGEST\_\-STRING\_\-LENGTH}}
+\index{SHA384\_\-DIGEST\_\-STRING\_\-LENGTH@{SHA384\_\-DIGEST\_\-STRING\_\-LENGTH}!hl_sha2ext.h@{hl\_\-sha2ext.h}}
+\subsubsection[{SHA384\_\-DIGEST\_\-STRING\_\-LENGTH}]{\setlength{\rightskip}{0pt plus 5cm}\#define SHA384\_\-DIGEST\_\-STRING\_\-LENGTH~(SHA384\_\-DIGEST\_\-LENGTH $\ast$ 2 + 1)}}
+\label{hl__sha2ext_8h_a5e0cfb23f0ec75951994c93963b98f46}
+
+
+Definition at line 80 of file hl\_\-sha2ext.h.\hypertarget{hl__sha2ext_8h_a768752124501032a219d4426b2ce3197}{
+\index{hl\_\-sha2ext.h@{hl\_\-sha2ext.h}!SHA512\_\-BLOCK\_\-LENGTH@{SHA512\_\-BLOCK\_\-LENGTH}}
+\index{SHA512\_\-BLOCK\_\-LENGTH@{SHA512\_\-BLOCK\_\-LENGTH}!hl_sha2ext.h@{hl\_\-sha2ext.h}}
+\subsubsection[{SHA512\_\-BLOCK\_\-LENGTH}]{\setlength{\rightskip}{0pt plus 5cm}\#define SHA512\_\-BLOCK\_\-LENGTH~128}}
+\label{hl__sha2ext_8h_a768752124501032a219d4426b2ce3197}
+
+
+Definition at line 81 of file hl\_\-sha2ext.h.\hypertarget{hl__sha2ext_8h_a5a8416d0f8e1af6d7525114ef09be118}{
+\index{hl\_\-sha2ext.h@{hl\_\-sha2ext.h}!SHA512\_\-DIGEST\_\-LENGTH@{SHA512\_\-DIGEST\_\-LENGTH}}
+\index{SHA512\_\-DIGEST\_\-LENGTH@{SHA512\_\-DIGEST\_\-LENGTH}!hl_sha2ext.h@{hl\_\-sha2ext.h}}
+\subsubsection[{SHA512\_\-DIGEST\_\-LENGTH}]{\setlength{\rightskip}{0pt plus 5cm}\#define SHA512\_\-DIGEST\_\-LENGTH~64}}
+\label{hl__sha2ext_8h_a5a8416d0f8e1af6d7525114ef09be118}
+
+
+Definition at line 82 of file hl\_\-sha2ext.h.\hypertarget{hl__sha2ext_8h_a8c2f6b671b4f82d98f8f4fe856105f8a}{
+\index{hl\_\-sha2ext.h@{hl\_\-sha2ext.h}!SHA512\_\-DIGEST\_\-STRING\_\-LENGTH@{SHA512\_\-DIGEST\_\-STRING\_\-LENGTH}}
+\index{SHA512\_\-DIGEST\_\-STRING\_\-LENGTH@{SHA512\_\-DIGEST\_\-STRING\_\-LENGTH}!hl_sha2ext.h@{hl\_\-sha2ext.h}}
+\subsubsection[{SHA512\_\-DIGEST\_\-STRING\_\-LENGTH}]{\setlength{\rightskip}{0pt plus 5cm}\#define SHA512\_\-DIGEST\_\-STRING\_\-LENGTH~(SHA512\_\-DIGEST\_\-LENGTH $\ast$ 2 + 1)}}
+\label{hl__sha2ext_8h_a8c2f6b671b4f82d98f8f4fe856105f8a}
+
+
+Definition at line 83 of file hl\_\-sha2ext.h.\hypertarget{hl__sha2ext_8h_aac3e549038e7ebd7af5a7e7385b93344}{
+\index{hl\_\-sha2ext.h@{hl\_\-sha2ext.h}!SHA512\_\-SHORT\_\-BLOCK\_\-LENGTH@{SHA512\_\-SHORT\_\-BLOCK\_\-LENGTH}}
+\index{SHA512\_\-SHORT\_\-BLOCK\_\-LENGTH@{SHA512\_\-SHORT\_\-BLOCK\_\-LENGTH}!hl_sha2ext.h@{hl\_\-sha2ext.h}}
+\subsubsection[{SHA512\_\-SHORT\_\-BLOCK\_\-LENGTH}]{\setlength{\rightskip}{0pt plus 5cm}\#define SHA512\_\-SHORT\_\-BLOCK\_\-LENGTH~(SHA512\_\-BLOCK\_\-LENGTH -\/ 16)}}
+\label{hl__sha2ext_8h_aac3e549038e7ebd7af5a7e7385b93344}
+
+
+Definition at line 84 of file hl\_\-sha2ext.h.
+
+\subsection{Typedef Documentation}
+\hypertarget{hl__sha2ext_8h_ada1fe7a264f43a5b97091398ad760dd9}{
+\index{hl\_\-sha2ext.h@{hl\_\-sha2ext.h}!sha2\_\-byte@{sha2\_\-byte}}
+\index{sha2\_\-byte@{sha2\_\-byte}!hl_sha2ext.h@{hl\_\-sha2ext.h}}
+\subsubsection[{sha2\_\-byte}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf hl\_\-uint8} {\bf sha2\_\-byte}}}
+\label{hl__sha2ext_8h_ada1fe7a264f43a5b97091398ad760dd9}
+Exactly 1 byte 
+
+Definition at line 96 of file hl\_\-sha2ext.h.\hypertarget{hl__sha2ext_8h_ac8a04e5c95648dec01f56e8a79e95187}{
+\index{hl\_\-sha2ext.h@{hl\_\-sha2ext.h}!sha2\_\-word32@{sha2\_\-word32}}
+\index{sha2\_\-word32@{sha2\_\-word32}!hl_sha2ext.h@{hl\_\-sha2ext.h}}
+\subsubsection[{sha2\_\-word32}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf hl\_\-uint32} {\bf sha2\_\-word32}}}
+\label{hl__sha2ext_8h_ac8a04e5c95648dec01f56e8a79e95187}
+Exactly 4 bytes 
+
+Definition at line 101 of file hl\_\-sha2ext.h.\hypertarget{hl__sha2ext_8h_aafcb9a8349a9a0c6f91950807b2f0d0d}{
+\index{hl\_\-sha2ext.h@{hl\_\-sha2ext.h}!sha2\_\-word64@{sha2\_\-word64}}
+\index{sha2\_\-word64@{sha2\_\-word64}!hl_sha2ext.h@{hl\_\-sha2ext.h}}
+\subsubsection[{sha2\_\-word64}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf hl\_\-uint64} {\bf sha2\_\-word64}}}
+\label{hl__sha2ext_8h_aafcb9a8349a9a0c6f91950807b2f0d0d}
+Exactly 8 bytes 
+
+Definition at line 106 of file hl\_\-sha2ext.h.\hypertarget{hl__sha2ext_8h_aa5ada4d74bf5109a2ae863d156373bce}{
+\index{hl\_\-sha2ext.h@{hl\_\-sha2ext.h}!SHA384\_\-CTX@{SHA384\_\-CTX}}
+\index{SHA384\_\-CTX@{SHA384\_\-CTX}!hl_sha2ext.h@{hl\_\-sha2ext.h}}
+\subsubsection[{SHA384\_\-CTX}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf SHA512\_\-CTX} {\bf SHA384\_\-CTX}}}
+\label{hl__sha2ext_8h_aa5ada4d74bf5109a2ae863d156373bce}
+
+
+This struct represents a SHA384-\/hash context. 
+
+Definition at line 122 of file hl\_\-sha2ext.h.

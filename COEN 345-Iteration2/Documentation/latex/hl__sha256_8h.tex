@@ -1,0 +1,99 @@
+\hypertarget{hl__sha256_8h}{
+\section{G:/Course Work/Engineering/Engineering HWK/COEN 345/c345pV1.0.1/c345pV1.0.1/c345Project/c345Project/hashlib/hl\_\-sha256.h File Reference}
+\label{hl__sha256_8h}\index{G:/Course Work/Engineering/Engineering HWK/COEN 345/c345pV1.0.1/c345pV1.0.1/c345Project/c345Project/hashlib/hl\_\-sha256.h@{G:/Course Work/Engineering/Engineering HWK/COEN 345/c345pV1.0.1/c345pV1.0.1/c345Project/c345Project/hashlib/hl\_\-sha256.h}}
+}
+
+
+This file contains the declaration of the \hyperlink{class_s_h_a256}{SHA256} class.  
+{\ttfamily \#include \char`\"{}hl\_\-types.h\char`\"{}}\par
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct_s_h_a256___c_t_x}{SHA256\_\-CTX}
+\begin{DoxyCompactList}\small\item\em This struct represents a SHA256-\/hash context. \item\end{DoxyCompactList}\item 
+class \hyperlink{class_s_h_a256}{SHA256}
+\begin{DoxyCompactList}\small\item\em This class represents the implementation of the sha256 algorithm. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{hl__sha256_8h_af7a1879c2d7cd5cf31c91c0eb91b0015}{SHA256\_\-BLOCK\_\-LENGTH}~64
+\item 
+\#define \hyperlink{hl__sha256_8h_adfc8fa95344782913efd4ee7d9a9ea74}{SHA256\_\-SHORT\_\-BLOCK\_\-LENGTH}~(SHA256\_\-BLOCK\_\-LENGTH -\/ 8)
+\item 
+\#define \hyperlink{hl__sha256_8h_aa9cf0abf87b30c4c63e9c7e89c590579}{SHA256\_\-DIGEST\_\-LENGTH}~32
+\item 
+\#define \hyperlink{hl__sha256_8h_a0c71de183b257bb9ef09a865ad1ddc29}{SHA256\_\-DIGEST\_\-STRING\_\-LENGTH}~(SHA256\_\-DIGEST\_\-LENGTH $\ast$ 2 + 1)
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef \hyperlink{hl__types_8h_adc1917ae5f0dc40725be12536ffe0a6c}{hl\_\-uint8} \hyperlink{hl__sha256_8h_ada1fe7a264f43a5b97091398ad760dd9}{sha2\_\-byte}
+\item 
+typedef \hyperlink{hl__types_8h_ae2fe08a06e4f429c5519ec9865f304d6}{hl\_\-uint32} \hyperlink{hl__sha256_8h_ac8a04e5c95648dec01f56e8a79e95187}{sha2\_\-word32}
+\item 
+typedef \hyperlink{hl__types_8h_acab20cc881134266c8bb4c3d27e1c906}{hl\_\-uint64} \hyperlink{hl__sha256_8h_aafcb9a8349a9a0c6f91950807b2f0d0d}{sha2\_\-word64}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This file contains the declaration of the \hyperlink{class_s_h_a256}{SHA256} class. \begin{DoxyDate}{Date}
+Di 25 Sep 2007 
+\end{DoxyDate}
+
+
+Definition in file \hyperlink{hl__sha256_8h_source}{hl\_\-sha256.h}.
+
+\subsection{Define Documentation}
+\hypertarget{hl__sha256_8h_af7a1879c2d7cd5cf31c91c0eb91b0015}{
+\index{hl\_\-sha256.h@{hl\_\-sha256.h}!SHA256\_\-BLOCK\_\-LENGTH@{SHA256\_\-BLOCK\_\-LENGTH}}
+\index{SHA256\_\-BLOCK\_\-LENGTH@{SHA256\_\-BLOCK\_\-LENGTH}!hl_sha256.h@{hl\_\-sha256.h}}
+\subsubsection[{SHA256\_\-BLOCK\_\-LENGTH}]{\setlength{\rightskip}{0pt plus 5cm}\#define SHA256\_\-BLOCK\_\-LENGTH~64}}
+\label{hl__sha256_8h_af7a1879c2d7cd5cf31c91c0eb91b0015}
+
+
+Definition at line 78 of file hl\_\-sha256.h.\hypertarget{hl__sha256_8h_aa9cf0abf87b30c4c63e9c7e89c590579}{
+\index{hl\_\-sha256.h@{hl\_\-sha256.h}!SHA256\_\-DIGEST\_\-LENGTH@{SHA256\_\-DIGEST\_\-LENGTH}}
+\index{SHA256\_\-DIGEST\_\-LENGTH@{SHA256\_\-DIGEST\_\-LENGTH}!hl_sha256.h@{hl\_\-sha256.h}}
+\subsubsection[{SHA256\_\-DIGEST\_\-LENGTH}]{\setlength{\rightskip}{0pt plus 5cm}\#define SHA256\_\-DIGEST\_\-LENGTH~32}}
+\label{hl__sha256_8h_aa9cf0abf87b30c4c63e9c7e89c590579}
+
+
+Definition at line 80 of file hl\_\-sha256.h.\hypertarget{hl__sha256_8h_a0c71de183b257bb9ef09a865ad1ddc29}{
+\index{hl\_\-sha256.h@{hl\_\-sha256.h}!SHA256\_\-DIGEST\_\-STRING\_\-LENGTH@{SHA256\_\-DIGEST\_\-STRING\_\-LENGTH}}
+\index{SHA256\_\-DIGEST\_\-STRING\_\-LENGTH@{SHA256\_\-DIGEST\_\-STRING\_\-LENGTH}!hl_sha256.h@{hl\_\-sha256.h}}
+\subsubsection[{SHA256\_\-DIGEST\_\-STRING\_\-LENGTH}]{\setlength{\rightskip}{0pt plus 5cm}\#define SHA256\_\-DIGEST\_\-STRING\_\-LENGTH~(SHA256\_\-DIGEST\_\-LENGTH $\ast$ 2 + 1)}}
+\label{hl__sha256_8h_a0c71de183b257bb9ef09a865ad1ddc29}
+
+
+Definition at line 81 of file hl\_\-sha256.h.\hypertarget{hl__sha256_8h_adfc8fa95344782913efd4ee7d9a9ea74}{
+\index{hl\_\-sha256.h@{hl\_\-sha256.h}!SHA256\_\-SHORT\_\-BLOCK\_\-LENGTH@{SHA256\_\-SHORT\_\-BLOCK\_\-LENGTH}}
+\index{SHA256\_\-SHORT\_\-BLOCK\_\-LENGTH@{SHA256\_\-SHORT\_\-BLOCK\_\-LENGTH}!hl_sha256.h@{hl\_\-sha256.h}}
+\subsubsection[{SHA256\_\-SHORT\_\-BLOCK\_\-LENGTH}]{\setlength{\rightskip}{0pt plus 5cm}\#define SHA256\_\-SHORT\_\-BLOCK\_\-LENGTH~(SHA256\_\-BLOCK\_\-LENGTH -\/ 8)}}
+\label{hl__sha256_8h_adfc8fa95344782913efd4ee7d9a9ea74}
+
+
+Definition at line 79 of file hl\_\-sha256.h.
+
+\subsection{Typedef Documentation}
+\hypertarget{hl__sha256_8h_ada1fe7a264f43a5b97091398ad760dd9}{
+\index{hl\_\-sha256.h@{hl\_\-sha256.h}!sha2\_\-byte@{sha2\_\-byte}}
+\index{sha2\_\-byte@{sha2\_\-byte}!hl_sha256.h@{hl\_\-sha256.h}}
+\subsubsection[{sha2\_\-byte}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf hl\_\-uint8} {\bf sha2\_\-byte}}}
+\label{hl__sha256_8h_ada1fe7a264f43a5b97091398ad760dd9}
+Exactly 1 byte 
+
+Definition at line 93 of file hl\_\-sha256.h.\hypertarget{hl__sha256_8h_ac8a04e5c95648dec01f56e8a79e95187}{
+\index{hl\_\-sha256.h@{hl\_\-sha256.h}!sha2\_\-word32@{sha2\_\-word32}}
+\index{sha2\_\-word32@{sha2\_\-word32}!hl_sha256.h@{hl\_\-sha256.h}}
+\subsubsection[{sha2\_\-word32}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf hl\_\-uint32} {\bf sha2\_\-word32}}}
+\label{hl__sha256_8h_ac8a04e5c95648dec01f56e8a79e95187}
+Exactly 4 bytes 
+
+Definition at line 98 of file hl\_\-sha256.h.\hypertarget{hl__sha256_8h_aafcb9a8349a9a0c6f91950807b2f0d0d}{
+\index{hl\_\-sha256.h@{hl\_\-sha256.h}!sha2\_\-word64@{sha2\_\-word64}}
+\index{sha2\_\-word64@{sha2\_\-word64}!hl_sha256.h@{hl\_\-sha256.h}}
+\subsubsection[{sha2\_\-word64}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf hl\_\-uint64} {\bf sha2\_\-word64}}}
+\label{hl__sha256_8h_aafcb9a8349a9a0c6f91950807b2f0d0d}
+Exactly 8 bytes 
+
+Definition at line 103 of file hl\_\-sha256.h.

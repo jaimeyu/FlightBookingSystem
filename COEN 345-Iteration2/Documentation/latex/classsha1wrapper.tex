@@ -1,0 +1,157 @@
+\hypertarget{classsha1wrapper}{
+\section{sha1wrapper Class Reference}
+\label{classsha1wrapper}\index{sha1wrapper@{sha1wrapper}}
+}
+
+
+This class represents the \hyperlink{class_s_h_a1}{SHA1} wrapper-\/class.  
+
+
+{\ttfamily \#include $<$hl\_\-sha1wrapper.h$>$}Inheritance diagram for sha1wrapper::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2cm]{classsha1wrapper}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classsha1wrapper_a7d29b64ac9de33de5e643f9ea83da537}{sha1wrapper} ()
+\begin{DoxyCompactList}\small\item\em default constructor \item\end{DoxyCompactList}\item 
+virtual \hyperlink{classsha1wrapper_a607cb57d97b3f5b296e1e4dee4294eba}{$\sim$sha1wrapper} ()
+\begin{DoxyCompactList}\small\item\em default destructor \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual std::string \hyperlink{classsha1wrapper_a88f493c77f0655eb0b8e577226c49904}{hashIt} (void)
+\begin{DoxyCompactList}\small\item\em This method ends the hash process and returns the hash as string. \item\end{DoxyCompactList}\item 
+virtual std::string \hyperlink{classsha1wrapper_a1339f960e306c6bde056191d66001152}{convToString} (unsigned char $\ast$data)
+\begin{DoxyCompactList}\small\item\em This internal member-\/function convertes the hash-\/data to a std::string (HEX). \item\end{DoxyCompactList}\item 
+virtual void \hyperlink{classsha1wrapper_af862f411a597be53682cbce6177e06e6}{updateContext} (unsigned char $\ast$data, unsigned int len)
+\begin{DoxyCompactList}\small\item\em This method adds the given data to the current hash context. \item\end{DoxyCompactList}\item 
+virtual void \hyperlink{classsha1wrapper_a8ab1d20a43a4768df03799a14cfbb6b6}{resetContext} (void)
+\begin{DoxyCompactList}\small\item\em This method resets the current hash context. In other words: It starts a new hash process. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_s_h_a1}{SHA1} $\ast$ \hyperlink{classsha1wrapper_ad0360326a2201b79786f0dd2fcc42279}{sha1}
+\item 
+\hyperlink{struct_s_h_a1___c_t_x}{SHA1\_\-CTX} \hyperlink{classsha1wrapper_a7b9e5651faf4a23cf6fccebca11a801e}{context}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This class represents the \hyperlink{class_s_h_a1}{SHA1} wrapper-\/class. You can use this class to easily create a sha1 hash. Just create an instance of \hyperlink{classsha1wrapper}{sha1wrapper} and call the inherited memberfunctions \hyperlink{classhashwrapper_aa10904f0dc06eb54771ab26864622d0f}{getHashFromString()} and \hyperlink{classhashwrapper_ae4767e76e6d9e2b24b41f01ab9e7f03c}{getHashFromFile()} to create a hash based on a string or a file.
+
+Have a look at the following example:
+
+
+\begin{DoxyCodeInclude}
+\end{DoxyCodeInclude}
+
+
+\hyperlink{classsha1wrapper}{sha1wrapper} implements \hyperlink{classsha1wrapper_a8ab1d20a43a4768df03799a14cfbb6b6}{resetContext()}, \hyperlink{classsha1wrapper_af862f411a597be53682cbce6177e06e6}{updateContext()} and \hyperlink{classsha1wrapper_a88f493c77f0655eb0b8e577226c49904}{hashIt()} to create a hash. 
+
+Definition at line 66 of file hl\_\-sha1wrapper.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classsha1wrapper_a7d29b64ac9de33de5e643f9ea83da537}{
+\index{sha1wrapper@{sha1wrapper}!sha1wrapper@{sha1wrapper}}
+\index{sha1wrapper@{sha1wrapper}!sha1wrapper@{sha1wrapper}}
+\subsubsection[{sha1wrapper}]{\setlength{\rightskip}{0pt plus 5cm}sha1wrapper::sha1wrapper ()}}
+\label{classsha1wrapper_a7d29b64ac9de33de5e643f9ea83da537}
+
+
+default constructor 
+
+Definition at line 127 of file hl\_\-sha1wrapper.cpp.\hypertarget{classsha1wrapper_a607cb57d97b3f5b296e1e4dee4294eba}{
+\index{sha1wrapper@{sha1wrapper}!$\sim$sha1wrapper@{$\sim$sha1wrapper}}
+\index{$\sim$sha1wrapper@{$\sim$sha1wrapper}!sha1wrapper@{sha1wrapper}}
+\subsubsection[{$\sim$sha1wrapper}]{\setlength{\rightskip}{0pt plus 5cm}sha1wrapper::$\sim$sha1wrapper ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classsha1wrapper_a607cb57d97b3f5b296e1e4dee4294eba}
+
+
+default destructor 
+
+Definition at line 135 of file hl\_\-sha1wrapper.cpp.
+
+\subsection{Member Function Documentation}
+\hypertarget{classsha1wrapper_a1339f960e306c6bde056191d66001152}{
+\index{sha1wrapper@{sha1wrapper}!convToString@{convToString}}
+\index{convToString@{convToString}!sha1wrapper@{sha1wrapper}}
+\subsubsection[{convToString}]{\setlength{\rightskip}{0pt plus 5cm}std::string sha1wrapper::convToString (unsigned char $\ast$ {\em data})\hspace{0.3cm}{\ttfamily  \mbox{[}protected, virtual\mbox{]}}}}
+\label{classsha1wrapper_a1339f960e306c6bde056191d66001152}
+
+
+This internal member-\/function convertes the hash-\/data to a std::string (HEX). 
+\begin{DoxyParams}{Parameters}
+\item[{\em data}]The hash-\/data to covert into HEX \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the converted data as std::string 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classhashwrapper_a1dacf43b1b726cd19a09d11eba6cd082}{hashwrapper}.
+
+Definition at line 73 of file hl\_\-sha1wrapper.cpp.\hypertarget{classsha1wrapper_a88f493c77f0655eb0b8e577226c49904}{
+\index{sha1wrapper@{sha1wrapper}!hashIt@{hashIt}}
+\index{hashIt@{hashIt}!sha1wrapper@{sha1wrapper}}
+\subsubsection[{hashIt}]{\setlength{\rightskip}{0pt plus 5cm}std::string sha1wrapper::hashIt (void)\hspace{0.3cm}{\ttfamily  \mbox{[}protected, virtual\mbox{]}}}}
+\label{classsha1wrapper_a88f493c77f0655eb0b8e577226c49904}
+
+
+This method ends the hash process and returns the hash as string. \begin{DoxyReturn}{Returns}
+a hash as std::string 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classhashwrapper_a53f97c06885ed2b1fa255759a957a782}{hashwrapper}.
+
+Definition at line 57 of file hl\_\-sha1wrapper.cpp.\hypertarget{classsha1wrapper_a8ab1d20a43a4768df03799a14cfbb6b6}{
+\index{sha1wrapper@{sha1wrapper}!resetContext@{resetContext}}
+\index{resetContext@{resetContext}!sha1wrapper@{sha1wrapper}}
+\subsubsection[{resetContext}]{\setlength{\rightskip}{0pt plus 5cm}void sha1wrapper::resetContext (void)\hspace{0.3cm}{\ttfamily  \mbox{[}protected, virtual\mbox{]}}}}
+\label{classsha1wrapper_a8ab1d20a43a4768df03799a14cfbb6b6}
+
+
+This method resets the current hash context. In other words: It starts a new hash process. 
+
+Implements \hyperlink{classhashwrapper_aa7d46e9630a794ff08cfb5307660a86d}{hashwrapper}.
+
+Definition at line 116 of file hl\_\-sha1wrapper.cpp.\hypertarget{classsha1wrapper_af862f411a597be53682cbce6177e06e6}{
+\index{sha1wrapper@{sha1wrapper}!updateContext@{updateContext}}
+\index{updateContext@{updateContext}!sha1wrapper@{sha1wrapper}}
+\subsubsection[{updateContext}]{\setlength{\rightskip}{0pt plus 5cm}void sha1wrapper::updateContext (unsigned char $\ast$ {\em data}, \/  unsigned int {\em len})\hspace{0.3cm}{\ttfamily  \mbox{[}protected, virtual\mbox{]}}}}
+\label{classsha1wrapper_af862f411a597be53682cbce6177e06e6}
+
+
+This method adds the given data to the current hash context. 
+\begin{DoxyParams}{Parameters}
+\item[{\em data}]The data to add to the current context \item[{\em len}]The length of the data to add \end{DoxyParams}
+
+
+Implements \hyperlink{classhashwrapper_a7fe42ccf310e7d2cfe95f61732b73197}{hashwrapper}.
+
+Definition at line 107 of file hl\_\-sha1wrapper.cpp.
+
+\subsection{Member Data Documentation}
+\hypertarget{classsha1wrapper_a7b9e5651faf4a23cf6fccebca11a801e}{
+\index{sha1wrapper@{sha1wrapper}!context@{context}}
+\index{context@{context}!sha1wrapper@{sha1wrapper}}
+\subsubsection[{context}]{\setlength{\rightskip}{0pt plus 5cm}{\bf SHA1\_\-CTX} {\bf sha1wrapper::context}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classsha1wrapper_a7b9e5651faf4a23cf6fccebca11a801e}
+
+
+Definition at line 77 of file hl\_\-sha1wrapper.h.\hypertarget{classsha1wrapper_ad0360326a2201b79786f0dd2fcc42279}{
+\index{sha1wrapper@{sha1wrapper}!sha1@{sha1}}
+\index{sha1@{sha1}!sha1wrapper@{sha1wrapper}}
+\subsubsection[{sha1}]{\setlength{\rightskip}{0pt plus 5cm}{\bf SHA1}$\ast$ {\bf sha1wrapper::sha1}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classsha1wrapper_ad0360326a2201b79786f0dd2fcc42279}
+\hyperlink{class_s_h_a1}{SHA1} access 
+
+Definition at line 72 of file hl\_\-sha1wrapper.h.
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+G:/Course Work/Engineering/Engineering HWK/COEN 345/c345pV1.0.1/c345pV1.0.1/c345Project/c345Project/hashlib/\hyperlink{hl__sha1wrapper_8h}{hl\_\-sha1wrapper.h}\item 
+G:/Course Work/Engineering/Engineering HWK/COEN 345/c345pV1.0.1/c345pV1.0.1/c345Project/c345Project/hashlib/\hyperlink{hl__sha1wrapper_8cpp}{hl\_\-sha1wrapper.cpp}\end{DoxyCompactItemize}
